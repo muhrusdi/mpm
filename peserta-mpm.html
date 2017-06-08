@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pendaftaran PPFM</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="assets/stylesheets/base.css">
+	<link rel="stylesheet" href="assets/stylesheets/fonts.css">
+	<link rel="stylesheet" href="assets/stylesheets/main.css">
+	<link rel="stylesheet" href="assets/stylesheets/jquery-ui.min.css">
+	<link rel="stylesheet" href="assets/stylesheets/MonthPicker.css">
+
+	<script src="assets/scripts/jquery.min.js"></script>
+	<script src="assets/scripts/uikit.min.js"></script>
+	<script src="assets/scripts/form-select.min.js"></script>
+	<script src="assets/scripts/jquery-ui.min.js"></script>
+	<script src="assets/scripts/MonthPicker.min.js"></script>
+	<script src="assets/scripts/formcache.min.js"></script>
+	<script src="assets/scripts/notify.min.js"></script>
+	<script src="assets/scripts/sticky.min.js"></script>
+	<script src="assets/scripts/main.js"></script>
+</head>
+<body id="peserta-ppfm">
+	<nav id="globalnav" class="globalnav uk-navbar">
+		<ul class="gn-logo">
+			<li class="gn-hidden"><a href="#">sipakatau</a></li>
+			<li><button id="toggle-side"><i class="uk-icon-navicon uk-icon-small"></i></button></li>
+		</ul>
+		<div class="uk-navbar-flip gn-account">
+			<ul class="gn-account-list">
+				<li>
+					<div class="link" data-uk-dropdown="{mode:'click'}">
+						<ul>
+							<li><div class="image"><img src="assets/images/user_icon.png" alt=""></div></li>
+							<li class="uk-hidden-medium uk-hidden-small"><span>Muhammad Rusdi</span></li>
+							<li><span><i class="uk-icon-angle-down"></i></span></li>
+						</ul>
+						<div class="uk-dropdown uk-dropdown-bottom">
+							<ul>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="globalnav-placeholder"></div>
+	<div class="main">
+		<div class="m-sidebar">
+			<div>
+				<div class="ms-account uk-text-center">
+					<div class="msa-image">
+						<div class="msa-image-inner">
+							<img src="assets/images/user_icon.png" alt="">
+						</div>
+					</div>
+					<div class="msa-text">
+						<div class="msa-text-wrapper">
+							<div class="msa-text-inner">
+								<h2>Muhammad Rusdi</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+				<nav class="ms-nav">
+					<ul class="msn-list uk-nav uk-nav-side uk-nav-parent-icon" data-uk-nav="{multiple:true}">
+						<li class="msn-item uk-parent">
+							<a href="#" class="msn-link"><i class="uk-icon-home"></i>Dashboard</a>
+							<ul class="uk-nav-sub">
+								<li><a href="index.html"><i class="uk-icon-circle-o"></i>Peta Wilayah PPFM</a></li>
+								<li><a href="laporan-peserta-ppfm.html"><i class="uk-icon-circle-o"></i>Laporan Peserta PPFM</a></li>
+							</ul>
+						</li>
+						<li class="msn-item uk-parent uk-active">
+							<a href="#" class="msn-link"><i class="uk-icon-edit"></i>Menu MPM</a>
+							<ul class="uk-nav-sub">
+								<li><a href="register-mpm.html"><i class="uk-icon-circle-o"></i>Pendaftaran MPM</a></li>
+								<li class="uk-active"><a href="peserta-mpm.html"><i class="uk-icon-circle-o"></i>Daftar Peserta MPM</a></li>
+							</ul>
+
+						</li>
+						<li class="msn-item uk-parent">
+							<a href="#" class="msn-link"><i class="uk-icon-file-text"></i>Menu PPFM</a>
+							<ul class="uk-nav-sub">
+								<li><a href="register-ppfm.html"><i class="uk-icon-circle-o"></i>Pendaftaran PPFM</a></li>
+								<li><a href="#"><i class="uk-icon-circle-o"></i>Perubahan Data PPFM</a></li>
+								<li><a href="peserta-ppfm.html"><i class="uk-icon-circle-o"></i>Daftar Peserta PPFM</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div id="pendaftaran-mpm-content" class="m-content">
+			<div class="mc-header">
+				<style>
+					#pendaftaran-mpm-content > .mc-header {
+						background: url('assets/images/pmpm.jpg') no-repeat center center;
+    					background-size: cover;
+					}
+				</style>
+				<div class="mch-text">
+					<h2>Daftar Peserta MPM</h2>
+				</div>
+			</div>
+			<div class="mc-breadcrumb" data-uk-sticky="{top:60}">
+				<ul class="uk-breadcrumb">
+					<li><a href="#">Menu MPM</a></li>
+					<li><a href="#">Daftar Peserta MPM</a></li>
+				</ul>
+			</div>
+			<div class="mc-form">
+				<div class="mc-form-wrapper">
+					<div class="mc-form-inner">
+						<div>
+							<div class="mcf-content">
+								<div class="mcf-title">
+									<h3>Daftar Sasaran Verifikasi Rumah Tangga</h3>
+								</div>
+								<div class="main-table">
+									<div class="mt-wrapper">
+										<div class="mt-inner">
+											<div class="mt-aksi">
+												<div class="uk-clearfix">
+													<div class="uk-float-right">
+														<ul>
+															<li><button  class="button-primary cetak" data-uk-modal="{target:'#my-modal'}">Cetak</button></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div>
+												<table class="uk-table uk-table-hover">
+													<thead>
+														<tr>
+															<th>No.</th>
+															<th>Kecamatan.</th>
+															<th>Kelurahan / Desa</th>
+															<th>Nama Jalan RT / RW</th>
+															<th>NIK</th>
+															<th>Nama Lengkap Sesuai KTP</th>
+															<th>Nomor KK</th>
+															<th>Nama Kepala Ruta</th>
+															<th>Status Pekerjaan Kepala Ruta</th>
+															<th>Aksi</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>1.</td>
+															<td>Donridonri</td>
+															<td>Belo</td>
+															<td>Leworeng</td>
+															<td>Jl. Pengayoman No. 2</td>
+															<td>1233456789</td>
+															<td>Muhammad Rusdi</td>
+															<td>12345567890</td>
+															<td>Kris Biantoro</td>
+															<td>
+																<div class="uk-button-group">
+																	<button class="uk-button" type="button">Detail</button>
+																	<div data-uk-dropdown="{mode:'click', pos:'bottom-right'}">
+																		<button class="uk-button" type="button"><i class="uk-icon-caret-down"></i></button>
+																		<div class="uk-dropdown uk-dropdown-small">
+																			<ul>
+																				<li><a href="#">Edit</a></li>
+																				<li><a href="#">Detail</a></li>
+																				<li><a href="#">Hapus</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td>2.</td>
+															<td>Donridonri</td>
+															<td>Belo</td>
+															<td>Leworeng</td>
+															<td>Jl. Pengayoman No. 2</td>
+															<td>1233456789</td>
+															<td>Muhammad Rusdi</td>
+															<td>12345567890</td>
+															<td>Kris Biantoro</td>
+															<td>
+																<div class="uk-button-group">
+																	<button class="uk-button" type="button">Detail</button>
+																	<div data-uk-dropdown="{mode:'click', pos:'bottom-right'}">
+																		<button class="uk-button" type="button"><i class="uk-icon-caret-down"></i></button>
+																		<div class="uk-dropdown uk-dropdown-small">
+																			<ul>
+																				<li><a href="#">Edit</a></li>
+																				<li><a href="#">Detail</a></li>
+																				<li><a href="#">Hapus</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td>3.</td>
+															<td>Donridonri</td>
+															<td>Belo</td>
+															<td>Leworeng</td>
+															<td>Jl. Pengayoman No. 2</td>
+															<td>1233456789</td>
+															<td>Muhammad Rusdi</td>
+															<td>12345567890</td>
+															<td>Kris Biantoro</td>
+															<td>
+																<div class="uk-button-group">
+																	<button class="uk-button" type="button">Detail</button>
+																	<div data-uk-dropdown="{mode:'click', pos:'bottom-right'}">
+																		<button class="uk-button" type="button"><i class="uk-icon-caret-down"></i></button>
+																		<div class="uk-dropdown uk-dropdown-small">
+																			<ul>
+																				<li><a href="#">Edit</a></li>
+																				<li><a href="#">Detail</a></li>
+																				<li><a href="#">Hapus</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td>4.</td>
+															<td>Donridonri</td>
+															<td>Belo</td>
+															<td>Leworeng</td>
+															<td>Jl. Pengayoman No. 2</td>
+															<td>1233456789</td>
+															<td>Muhammad Rusdi</td>
+															<td>12345567890</td>
+															<td>Kris Biantoro</td>
+															<td>
+																<div class="uk-button-group">
+																	<button class="uk-button" type="button">Detail</button>
+																	<div data-uk-dropdown="{mode:'click', pos:'bottom-right'}">
+																		<button class="uk-button" type="button"><i class="uk-icon-caret-down"></i></button>
+																		<div class="uk-dropdown uk-dropdown-small">
+																			<ul>
+																				<li><a href="#">Edit</a></li>
+																				<li><a href="#">Detail</a></li>
+																				<li><a href="#">Hapus</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td>4.</td>
+															<td>Donridonri</td>
+															<td>Belo</td>
+															<td>Leworeng</td>
+															<td>Jl. Pengayoman No. 2</td>
+															<td>1233456789</td>
+															<td>Muhammad Rusdi</td>
+															<td>12345567890</td>
+															<td>Kris Biantoro</td>
+															<td>
+																<div class="uk-button-group">
+																	<button class="uk-button" type="button">Detail</button>
+																	<div data-uk-dropdown="{mode:'click', pos:'bottom-right'}">
+																		<button class="uk-button" type="button"><i class="uk-icon-caret-down"></i></button>
+																		<div class="uk-dropdown uk-dropdown-small">
+																			<ul>
+																				<li><a href="#">Edit</a></li>
+																				<li><a href="#">Detail</a></li>
+																				<li><a href="#">Hapus</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td>4.</td>
+															<td>Donridonri</td>
+															<td>Belo</td>
+															<td>Leworeng</td>
+															<td>Jl. Pengayoman No. 2</td>
+															<td>1233456789</td>
+															<td>Muhammad Rusdi</td>
+															<td>12345567890</td>
+															<td>Kris Biantoro</td>
+															<td>
+																<div class="uk-button-group">
+																	<button class="uk-button" type="button">Detail</button>
+																	<div data-uk-dropdown="{mode:'click', pos:'bottom-right'}">
+																		<button class="uk-button" type="button"><i class="uk-icon-caret-down"></i></button>
+																		<div class="uk-dropdown uk-dropdown-small">
+																			<ul>
+																				<li><a href="#">Edit</a></li>
+																				<li><a href="#">Detail</a></li>
+																				<li><a href="#">Hapus</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td>4.</td>
+															<td>Donridonri</td>
+															<td>Belo</td>
+															<td>Leworeng</td>
+															<td>Jl. Pengayoman No. 2</td>
+															<td>1233456789</td>
+															<td>Muhammad Rusdi</td>
+															<td>12345567890</td>
+															<td>Kris Biantoro</td>
+															<td>
+																<div class="uk-button-group">
+																	<button class="uk-button" type="button">Detail</button>
+																	<div data-uk-dropdown="{mode:'click', pos:'bottom-right'}">
+																		<button class="uk-button" type="button"><i class="uk-icon-caret-down"></i></button>
+																		<div class="uk-dropdown uk-dropdown-small">
+																			<ul>
+																				<li><a href="#">Edit</a></li>
+																				<li><a href="#">Detail</a></li>
+																				<li><a href="#">Hapus</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											
+											<div class="pagination uk-clearfix">
+												<div class="uk-float-right">
+													<ul class="uk-pagination">
+														<li class="uk-disabled"><a href="#"><i class="uk-icon-caret-left"></i></a></li>
+														<li><a href="#">1</a></li>
+														<li class="uk-active"><a href="#">2</a></li>
+														<li><a href="#">3</a></li>
+														<li><a href="#">4</a></li>
+														<li><a href="#"><i class="uk-icon-caret-right"></i></a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="my-modal" class="uk-modal">
+		<div class="uk-modal-dialog">
+			<a class="uk-modal-close uk-close"></a>
+			<input type="text">
+			<input type="text">
+			<button>my button</button>
+		</div>
+	</div>
+	<footer id="globalfooter" class="globalfooter">
+		<div class="gf-content uk-clearfix">
+			<div class="gf-item uk-float-left">
+				<p>2017 Bappeda Kabupaten Soppeng. <span">Developer</span></p>
+			</div>
+			<div class="gf-item uk-float-right">
+				<a href="" class="uk-button" data-uk-smooth-scroll>Kembali Ke Atas <i class="uk-icon-angle-up"></i></a>
+			</div>
+		</div>
+	</footer>
+	<!-- <script src="assets/js/scripts.js"></script> -->
+</body>
+</html>

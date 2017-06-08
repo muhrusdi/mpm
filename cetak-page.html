@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Detail Peserta MPM</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="assets/stylesheets/base.css">
+	<link rel="stylesheet" href="assets/stylesheets/fonts.css">
+	<link rel="stylesheet" href="assets/stylesheets/main.css">
+	<link rel="stylesheet" href="assets/stylesheets/jquery-ui.min.css">
+	<link rel="stylesheet" href="assets/stylesheets/MonthPicker.css">
+
+	<script src="assets/scripts/jquery.min.js"></script>
+	<script src="assets/scripts/uikit.min.js"></script>
+	<script src="assets/scripts/form-select.min.js"></script>
+	<script src="assets/scripts/jquery-ui.min.js"></script>
+	<script src="assets/scripts/MonthPicker.min.js"></script>
+	<script src="assets/scripts/formcache.min.js"></script>
+	<script src="assets/scripts/notify.min.js"></script>
+	<script src="assets/scripts/sticky.min.js"></script>
+	<script src="assets/scripts/main.js"></script>
+</head>
+<body>
+	<nav class="print-page">
+		<div class="title">
+			<h2>SIPAKATAU ( Sistem Informasi Penanggulangan Kemiskinan Terpadu )</h2>
+		</div>
+	</nav>
+	<div class="main-cetak-table print-page">
+		<div class="table-desc">
+			<div class="uk-clearfix">
+				<div class="uk-float-left">
+					<h4>Daftar Sasaran Verifikasi Rumah tangga</h4>
+				</div>
+				<div class="uk-float-right">
+					<p class="cetak-date"></p>
+					<script>
+						var d = new Date();
+						$('.cetak-date').text(d.toLocaleDateString());
+					</script>
+				</div>
+			</div>
+		</div>
+		<table id="table-ppfm" class="uk-table uk-table-hover">
+			<thead>
+				<tr>
+					<th>No.</th>
+					<th>Kecamatan.</th>
+					<th>Kelurahan / Desa</th>
+					<th>Nama Jalan RT / RW</th>
+					<th>NIK</th>
+					<th>Nama Lengkap Sesuai KTP</th>
+					<th>Nomor KK</th>
+					<th>Nama Kepala Ruta</th>
+					<th>Status Pekerjaan Kepala Ruta</th>
+					<th>Jumlah Anggota Ruta</th>
+					<th>Jenis Kelamin</th>
+					<th>Bulan & Tahun Lahir</th>
+					<th>Hubungan Dengan Kepala Ruta</th>
+					<th>Hubungan Dengan Kepala Keluarga</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1.</td>
+					<td>Donridonri</td>
+					<td>Belo</td>
+					<td>Jl. Pengayoman No. 2</td>
+					<td>1233456789</td>
+					<td>Muhammad Rusdi</td>
+					<td>12345567890</td>
+					<td>Kris Biantoro</td>
+					<td>Pekerja Bebas Pertanian</td>
+					<td>7 Orang</td>
+					<td>Laki-Laki</td>
+					<td>05-1990</td>
+					<td>Orang Tua/ Mertua</td>
+					<td>Kepala Rumah Tangga</td>
+				</tr>
+				<tr>
+					<td>1.</td>
+					<td>Donridonri</td>
+					<td>Belo</td>
+					<td>Jl. Pengayoman No. 2</td>
+					<td>1233456789</td>
+					<td>Muhammad Rusdi</td>
+					<td>12345567890</td>
+					<td>Kris Biantoro</td>
+					<td>Pekerja Bebas Pertanian</td>
+					<td>7 Orang</td>
+					<td>Laki-Laki</td>
+					<td>05-1990</td>
+					<td>Orang Tua/ Mertua</td>
+					<td>Kepala Rumah Tangga</td>
+				</tr>
+				<tr>
+					<td>1.</td>
+					<td>Donridonri</td>
+					<td>Belo</td>
+					<td>Jl. Pengayoman No. 2</td>
+					<td>1233456789</td>
+					<td>Muhammad Rusdi</td>
+					<td>12345567890</td>
+					<td>Kris Biantoro</td>
+					<td>Pekerja Bebas Pertanian</td>
+					<td>7 Orang</td>
+					<td>Laki-Laki</td>
+					<td>05-1990</td>
+					<td>Orang Tua/ Mertua</td>
+					<td>Kepala Rumah Tangga</td>
+				</tr>
+				<tr>
+					<td>1.</td>
+					<td>Donridonri</td>
+					<td>Belo</td>
+					<td>Jl. Pengayoman No. 2</td>
+					<td>1233456789</td>
+					<td>Muhammad Rusdi</td>
+					<td>12345567890</td>
+					<td>Kris Biantoro</td>
+					<td>Pekerja Bebas Pertanian</td>
+					<td>7 Orang</td>
+					<td>Laki-Laki</td>
+					<td>05-1990</td>
+					<td>Orang Tua/ Mertua</td>
+					<td>Kepala Rumah Tangga</td>
+				</tr>
+				<tr>
+					<td>1.</td>
+					<td>Donridonri</td>
+					<td>Belo</td>
+					<td>Jl. Pengayoman No. 2</td>
+					<td>1233456789</td>
+					<td>Muhammad Rusdi</td>
+					<td>12345567890</td>
+					<td>Kris Biantoro</td>
+					<td>Pekerja Bebas Pertanian</td>
+					<td>7 Orang</td>
+					<td>Laki-Laki</td>
+					<td>05-1990</td>
+					<td>Orang Tua/ Mertua</td>
+					<td>Kepala Rumah Tangga</td>
+				</tr>
+				<tr>
+					<td>1.</td>
+					<td>Donridonri</td>
+					<td>Belo</td>
+					<td>Jl. Pengayoman No. 2</td>
+					<td>1233456789</td>
+					<td>Muhammad Rusdi</td>
+					<td>12345567890</td>
+					<td>Kris Biantoro</td>
+					<td>Pekerja Bebas Pertanian</td>
+					<td>7 Orang</td>
+					<td>Laki-Laki</td>
+					<td>05-1990</td>
+					<td>Orang Tua/ Mertua</td>
+					<td>Kepala Rumah Tangga</td>
+				</tr>
+				<tr>
+					<td>1.</td>
+					<td>Donridonri</td>
+					<td>Belo</td>
+					<td>Jl. Pengayoman No. 2</td>
+					<td>1233456789</td>
+					<td>Muhammad Rusdi</td>
+					<td>12345567890</td>
+					<td>Kris Biantoro</td>
+					<td>Pekerja Bebas Pertanian</td>
+					<td>7 Orang</td>
+					<td>Laki-Laki</td>
+					<td>05-1990</td>
+					<td>Orang Tua/ Mertua</td>
+					<td>Kepala Rumah Tangga</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<footer class="print-page">
+		<div class="uk-clearfix">
+			<div class="uk-float-left">
+				<p>2017 Bappeda Kabupaten Soppeng</p>
+			</div>
+			<div class="uk-float-right">
+				<p>1</p>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

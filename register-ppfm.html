@@ -1,0 +1,1716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pendaftaran PPFM</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="assets/stylesheets/base.css">
+	<link rel="stylesheet" href="assets/stylesheets/fonts.css">
+	<link rel="stylesheet" href="assets/stylesheets/main.css">
+	<link rel="stylesheet" href="assets/stylesheets/jquery-ui.min.css">
+	<link rel="stylesheet" href="assets/stylesheets/MonthPicker.css">
+
+	<script src="assets/scripts/jquery.min.js"></script>
+	<script src="assets/scripts/uikit.min.js"></script>
+	<script src="assets/scripts/form-select.min.js"></script>
+	<script src="assets/scripts/jquery-ui.min.js"></script>
+	<script src="assets/scripts/MonthPicker.min.js"></script>
+	<script src="assets/scripts/formcache.min.js"></script>
+	<script src="assets/scripts/circle-progress.min.js"></script>
+	<script src="assets/scripts/notify.min.js"></script>
+	<script src="assets/scripts/datepicker.min.js"></script>
+	<script src="assets/scripts/sticky.min.js"></script>
+	<script src="assets/scripts/main.js"></script>
+</head>
+<body>
+	<nav id="globalnav" class="globalnav uk-navbar">
+		<ul class="gn-logo">
+			<li class="gn-hidden"><a href="#">sipakatau</a></li>
+			<li><button id="toggle-side"><i class="uk-icon-navicon uk-icon-small"></i></button></li>
+		</ul>
+		<div class="uk-navbar-flip gn-account">
+			<ul class="gn-account-list">
+				<li>
+					<div class="link" data-uk-dropdown="{mode:'click'}">
+						<ul>
+							<li><div class="image"><img src="assets/images/user_icon.png" alt=""></div></li>
+							<li class="uk-hidden-medium uk-hidden-small"><span>Muhammad Rusdi</span></li>
+							<li><span><i class="uk-icon-angle-down"></i></span></li>
+						</ul>
+						<div class="uk-dropdown uk-dropdown-bottom">
+							<ul>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="globalnav-placeholder"></div>
+	<div class="main">
+		<div class="m-sidebar">
+			<div>
+				<div class="ms-account uk-text-center">
+					<div class="msa-image">
+						<div class="msa-image-inner">
+							<img src="assets/images/user_icon.png" alt="">
+						</div>
+					</div>
+					<div class="msa-text">
+						<div class="msa-text-wrapper">
+							<div class="msa-text-inner">
+								<h2>Muhammad Rusdi</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+				<nav class="ms-nav">
+					<ul class="msn-list uk-nav uk-nav-side uk-nav-parent-icon" data-uk-nav="{multiple:true}">
+						<li class="msn-item uk-parent">
+							<a href="#" class="msn-link"><i class="uk-icon-home"></i>Dashboard</a>
+							<ul class="uk-nav-sub">
+								<li><a href="index.html"><i class="uk-icon-circle-o"></i>Peta Wilayah PPFM</a></li>
+								<li><a href="#"><i class="uk-icon-circle-o"></i>Laporan Peserta PPFM</a></li>
+							</ul>
+						</li>
+						<li class="msn-item uk-parent">
+							<a href="#" class="msn-link"><i class="uk-icon-edit"></i>Menu MPM</a>
+							<ul class="uk-nav-sub">
+								<li><a href="register-mpm.html"><i class="uk-icon-circle-o"></i>Pendaftaran MPM</a></li>
+								<li><a href="#"><i class="uk-icon-circle-o"></i>Daftar Pesrta MPM</a></li>
+							</ul>
+
+						</li>
+						<li class="msn-item uk-parent uk-active">
+							<a href="#" class="msn-link"><i class="uk-icon-file-text"></i>Menu PPFM</a>
+							<ul class="uk-nav-sub">
+								<li  class="uk-active"><a href="register-ppfm.html"><i class="uk-icon-circle-o"></i>Pendaftaran PPFM</a></li>
+								<li><a href="#"><i class="uk-icon-circle-o"></i>Perubahan Data PPFM</a></li>
+								<li><a href="peserta-ppfm.html"><i class="uk-icon-circle-o"></i>Daftar Peserta PPFM</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div id="pendaftaran-mpm-content" class="m-content">
+			<div class="mc-header">
+				<style>
+					#pendaftaran-mpm-content > .mc-header {
+						background: url('assets/images/pmpm.jpg') no-repeat center center;
+    					background-size: cover;
+					}
+				</style>
+				<div class="mch-text">
+					<h2>Pendaftaran PPFM</h2>
+				</div>
+			</div>
+			<div class="mc-breadcrumb" data-uk-sticky="{top:60}">
+				<ul class="uk-breadcrumb">
+					<li><a href="#">Menu MPM</a></li>
+					<li><a href="#">Pendaftaran PPFM</a></li>
+				</ul>
+			</div>
+			<div class="mc-form">
+				<div class="mc-form-wrapper">
+					<div class="mc-form-inner">
+						<form id="pendaftaran-ppfm" action="" method="post" class="uk-form">
+							<div class="mcf-content">
+								<div class="mcf-title">
+									<h3>Formulir Pendaftaran Data Terpadu Program Penanganan Fakir Miskin</h3>
+								</div>
+								<div class="mcf-wizard-step uk-width-1-1 uk-container-center">
+									<ul>
+										<li class="active">
+											<a href="#page-1">1</a>
+										</li>
+										<li class="disabled">
+											<a href="#page-2">2</a>
+										</li>
+										<li class="disabled">
+											<a href="#page-3">3</a>
+										</li>
+									</ul>
+								</div>
+								<fieldset id="page-1">
+									<ul class="mcf-list">										
+										<li class="mcf-item">
+											<div class="title">
+												<h4>I. Pengenalan Tempat</h4>
+											</div>
+											<div class="data uk-grid">
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="prov-iv">1. Provinsi</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="prov-iv" name="prov-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="1">Laki-Laki</option>
+						                                        <option value="2">Perempuan</option>
+						                                    </select>
+														</div> 
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="kab-iv">2. Kabupaten / Kota</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="kab-iv" name="kab-iv">
+						                                    	<option value="0">Pilih...</option>
+						                                        <option value="1">Laki-Laki</option>
+						                                        <option value="2">Perempuan</option>
+						                                    </select>
+														</div> 
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="kec-iv">3. Kecamatan</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="kec-iv" name="kec-iv">
+						                                    	<option value="0">Pilih...</option>
+						                                        <option value="1">Laki-Laki</option>
+						                                        <option value="2">Perempuan</option>
+						                                    </select>
+														</div> 
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="desa-iv">4. Desa / Kelurahan / Nagari</label>
+														<input id="desa-iv" type="text" name="desa-iv">
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="sls-iv">5. Nama SLS</label>
+														<input id="sls-iv" type="text" name="sls-iv">
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="alamat-iv">6. Alamat</label>
+														<input id="alamat-iv" type="text" name="alamat-iv">
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="no-uru-rt-iv">7. Nomor Urut Rumah Tangga (Dari PBDT 2015. FKP Kolom (1))</label>
+														<input id="no-uru-rt-iv" type="text" name="no-uru-rt-iv">
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="nama-krt-iv">7/ nama KRT</label>
+														<input id="nama-krt-iv" type="text" name="nama-krt-iv">
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="jum-krt-iv">9. Jumlah ART</label>
+														<input id="jum-krt-iv" type="text" name="jum-krt-iv">
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="jum-kel-iv">7. Jumlah Keluarga</label>
+														<input id="jum-kel-iv" type="text" name="jum-kel-iv">
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="title">
+												<h4>II. Keterang Petugas & Responden</h4>
+											</div>
+											<div class="data uk-grid">
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="tgl-pencacahan-iv">1. Tanggal Pencacah</label>
+														<input id="tgl-pencacahan-iv" class="ttl" type="text" name="tgl-pencacahan-iv" placeholder="&#xf073   Bulan/Tahun" data-uk-datepicker="{format:'DD-MM-YYYY', i18n: {months: ['Januari', 'Februari', 'Maret', 'April', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'], weekdays: ['Ahad', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu']}}">
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="nama-pencacah-iv">2. Nama Pencacah</label>
+														<input id="nama-pencacah-iv" type="text" name="nama-pencacah-iv">
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="tgl-pemeriksaan-iv">1.Tanggal Pemeriksa</label>
+														<input id="tgl-pemeriksaan-iv" class="ttl" type="text" name="tgl-pemeriksaan-iv" placeholder="&#xf073   Bulan/Tahun" data-uk-datepicker="{format:'DD-MM-YYYY', i18n: {months: ['Januari', 'Februari', 'Maret', 'April', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'], weekdays: ['Ahad', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu']}}">
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="nama-pencacah-iv">4. Nama Pemeriksa</label>
+														<input id="nama-pencacah-iv" type="text" name="nama-pencacah-iv">
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner uk-text-left">
+														<label for="">5. Hasil Pencacah Rumah Tangga:</label>
+														<div class="checkbox">
+															<div><input id="selesai" type="radio" name="hasil-pencacahan-rt"><label for="selesai">1. Selesai dicacah</label></div>
+															<div><input id="rt-tidak-ditemukan" type="radio" name="hasil-pencacahan-rt"><label for="rt-tidak-ditemukan">2. Rumah tangga tidak ditemukan</label></div>
+															<div><input id="rt-pindah" type="radio" name="hasil-pencacahan-rt"><label for="rt-pindah">3. Rumah tangga pindah / bangunan sensus sudah tidak ada</label></div>
+															<div><input id="rt-pbdt" type="radio" name="hasil-pencacahan-rt"><label for="rt-pbdt">4. Bagian dari rumah tangga di dokumen PBDT2015.FKP</label></div>
+														</div>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="title">
+												<h4>III. Keterangan Perumahan</h4>
+											</div>
+											<div class="data uk-grid">
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner uk-text-left">
+														<label for="">1. a. Status Penguasaan Bangunan Tempat Tinggal yang Ditempati</label>
+														<div class="checkbox">
+															<div><input id="1-a-miliki-sendiri" type="radio" name="penugasan-bangunan"><label for="1-a-miliki-sendiri">1. Mikik Sendiri</label></div>
+															<div><input id="1-a-kontrak" type="radio" name="penugasan-bangunan"><label for="1-a-kontrak">2. Kontrak / Sewa</label></div>
+															<div><input id="1-a-bebas" type="radio" name="penugasan-bangunan"><label for="1-a-bebas">3. Bebas / Sewa</label></div>
+															<div><input id="1-a-dinas" type="radio" name="penugasan-bangunan"><label for="1-a-dinas">4. Dinas</label></div>
+															<div><input id="1-a-lainnya" type="radio" name="penugasan-bangunan"><label for="1-a-lainnya">5.Lainnya</label></div>
+														</div>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner uk-text-left">
+														<label for="">1. b. Status Lahan tempat Tinggal Yang Ditempati</label>
+														<div class="checkbox">
+															<div><input id="1-b-milik-sendiri" type="radio" name="status-lahan-tt"><label for="1-b-milik-sendiri">1. Mikik Sendiri</label></div>
+															<div><input id="1-b-milik-orang" type="radio" name="status-lahan-tt"><label for="1-b-milik-orang">2. Kontrak / Sewa</label></div>
+															<div><input id="1-b-tanah-negara" type="radio" name="status-lahan-tt"><label for="1-b-tanah-negara">3. Bebas / Sewa</label></div>
+															<div><input id="1-b-lainnya" type="radio" name="status-lahan-tt"><label for="1-b-lainnya">4. Lainnya</label></div>
+														</div>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="iii-luas-lantai-iv">2. Luas Lantai</label>
+														</div>
+														<div class="input-group">
+						                                    <i class="satuan">m<sup>2</sup></i>
+						                                    <input id="iii-luas-lantai-iv" type="text" name="iii-luas-lantai-iv">
+														</div> 
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner uk-text-left">
+														<label for="">3. Jenis Lantai Terluas</label>
+														<div class="checkbox">
+															<div><input id="marmer" type="radio" name="jenis-lantai-luas"><label for="marmer">Marmer</label></div>
+															<div><input id="keramik" type="radio" name="jenis-lantai-luas"><label for="keramik">Keramik</label></div>
+															<div><input id="parket" type="radio" name="jenis-lantai-luas"><label for="parket">Parket / Vinil / Permadai</label></div>
+															<div><input id="ubin" type="radio" name="jenis-lantai-luas"><label for="ubin">Ubin / Tegel / Teraso</label></div>
+															<div><input id="kayu" type="radio" name="jenis-lantai-luas"><label for="kayu">Kayu / Papan Kualitas Tinggi</label></div>
+															<div><input id="semen" type="radio" name="jenis-lantai-luas"><label for="semen">Semen / Bata Merah</label></div>
+															<div><input id="bambu" type="radio" name="jenis-lantai-luas"><label for="bambu">Bambu</label></div>
+															<div><input id="kayu-kualitas-rendah" type="radio" name="jenis-lantai-luas"><label for="kayu-kualitas-rendah">Kayu / Papan Kualitas Rendah</label></div>
+															<div><input id="tanah" type="radio" name="jenis-lantai-luas"><label for="tanah">Tanah</label></div>
+															<div><input id="lainnya" type="radio" name="jenis-lantai-luas"><label for="lainnya">Lainnya</label></div>
+														</div>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-3-10 uk-width-medium-1-3 uk-width-small-1-1">
+													<div class="data-inner uk-text-left">
+														<label for="">4. Jenis Dinding Terluas</label>
+														<div class="checkbox">
+															<div>
+																<input id="tembok-iv" type="radio" name="jenis-dinding-g"><label for="tembok-iv">1. Tembok</label>
+																<div class="checkbox-nest">
+																	<div><input id="dinding-bagus" type="radio" name="jenis-dinding"><label for="dinding-bagus">1. Bagus / Kualitas Tinggi</label></div>
+																	
+																	<div><input id="dinding-jelek" type="radio" name="jenis-dinding"><label for="dinding-jelek">2. Jelek / Kualitas Rendah</label></div>
+																</div>
+															</div>
+															<div>
+																<input id="plesteran-iv" type="radio" name="jenis-dinding-g"><label for="plesteran-iv">2. Plesteran Anyaman Bambu / Kawat</label>
+																<div class="checkbox-nest">
+																	<div><input id="plesteran-bagus" type="radio" name="jenis-dinding"><label for="plesteran-bagus">1. Bagus / Kualitas Tinggi</label></div>
+																	
+																	<div><input id="plesteran-jelek" type="radio" name="jenis-dinding"><label for="plesteran-jelek">2. Jelek / Kualitas Rendah</label></div>
+																</div>
+															</div>
+															<div>
+																<input id="jenis-kayu-v" type="radio" name="jenis-dinding-g"><label for="jenis-kayu-v">3. Kayu</label>
+																<div class="checkbox-nest">
+																	<div><input id="kayu-bagus" type="radio" name="jenis-dinding"><label for="kayu-bagus">1. Bagus / Kualitas Tinggi</label></div>
+																	
+																	<div><input id="kayu-jelek" type="radio" name="jenis-dinding"><label for="kayu-jelek">2. Jelek / Kualitas Rendah</label></div>
+																</div>
+															</div>
+															<div>
+																<input id="jenis-bambu-iv" type="radio" name="jenis-dinding-g"><label for="jenis-bambu-iv">4. Anyaman Bambu</label>
+																<div class="checkbox-nest">
+																	<div><input id="bambu-bagus" type="radio" name="jenis-dinding"><label for="bambu-bagus">1. Bagus / Kualitas Tinggi</label></div>
+																	
+																	<div><input id="bambu-jelek" type="radio" name="jenis-dinding"><label for="bambu-jelek">2. Jelek / Kualitas Rendah</label></div>
+																</div>
+															</div>
+														</div>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-6-10 uk-width-medium-2-3 uk-width-small-1-1">
+													<div class="data-inner uk-text-left">
+														<label for="">5. Jenis Atap Terluas</label>
+														<div class="checkbox">
+															<div class="uk-grid">
+																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																	<div>
+																		<input id="genteng-beton-iv" type="radio" name="jenis-atap-g"><label for="genteng-beton-iv">1. Beton / Genteng Beton</label>
+																		<div class="checkbox-nest">
+																			<div><input id="g-beton-bagus" type="radio" name="jenis-atap"><label for="g-beton-bagus">1. Bagus / Kualitas Tinggi</label></div>
+																			<div><input id="g-beton-jelek" type="radio" name="jenis-atap"><label for="g-beton-jelek">2. Jelek / Kualitas Rendah</label></div>
+																		</div>
+																	</div>
+																</div>
+																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																	<div>
+																		<input id="genteng-keramik-iv" type="radio" name="jenis-atap-g"><label for="genteng-keramik-iv">2. Genteng Keramik</label>
+																		<div class="checkbox-nest">
+																			<div><input id="g-keramik-bagus" type="radio" name="jenis-atap"><label for="g-keramik-bagus">1. Bagus / Kualitas Tinggi</label></div>
+																			<div><input id="g-keramik-jelek" type="radio" name="jenis-atap"><label for="g-keramik-jelek">2. Jelek / Kualitas Rendah</label></div>
+																		</div>
+																	</div>
+																</div>
+																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																	<div>
+																		<input id="genteng-metal-iv" type="radio" name="jenis-atap-g" value="Genteng Metal"><label for="genteng-metal-iv">3. Genteng Metal</label>
+																		<div class="checkbox-nest">
+																			<div><input id="g-metal-bagus" type="radio" name="jenis-atap"><label for="g-metal-bagus">1. Bagus / Kualitas Tinggi</label></div>
+																			<div><input id="g-metal-jelek" type="radio" name="jenis-atap"><label for="g-metal-jelek">2. Jelek / Kualitas Rendah</label></div>
+																		</div>
+																	</div>
+																</div>
+																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																	<div>
+																		<input id="genteng-tanah-iv" type="radio" name="jenis-atap-g"><label for="genteng-tanah-iv">4. Genteng Tanah Liat</label>
+																		<div class="checkbox-nest">
+																			<div><input id="g-tanah-bagus" type="radio" name="jenis-atap"><label for="g-tanah-bagus">1. Bagus / Kualitas Tinggi</label></div>
+																			<div><input id="g-tanah-jelek" type="radio" name="jenis-atap"><label for="g-tanah-jelek">2. Jelek / Kualitas Rendah</label></div>
+																		</div>
+																	</div>
+																</div>
+																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																	<div>
+																		<input id="genteng-asbes-iv" type="radio" name="jenis-atap-g"><label for="genteng-asbes-iv">5. Asbes</label>
+																		<div class="checkbox-nest">
+																			<div><input id="g-asbes-bagus" type="radio" name="jenis-atap"><label for="g-asbes-bagus">1. Bagus / Kualitas Tinggi</label></div>
+																			<div><input id="g-asbes-jelek" type="radio" name="jenis-atap"><label for="g-asbes-jelek">2. Jelek / Kualitas Rendah</label></div>
+																		</div>
+																	</div>
+																</div>
+																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																	<div>
+																		<input id="genteng-seng-iv" type="radio" name="jenis-atap-g"><label for="genteng-seng-iv">6. Seng</label>
+																		<div class="checkbox-nest">
+																			<div><input id="g-seng-bagus" type="radio" name="jenis-atap"><label for="g-seng-bagus">1. Bagus / Kualitas Tinggi</label></div>
+																			<div><input id="g-seng-jelek" type="radio" name="jenis-atap"><label for="g-seng-jelek">2. Jelek / Kualitas Rendah</label></div>
+																		</div>
+																	</div>
+																</div>
+																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																	<div>
+																		<input id="jenis-sirap-iv" type="radio" name="jenis-atap-g"><label for="jenis-sirap-iv">7. Sirap</label>
+																		<div class="checkbox-nest">
+																			<div><input id="sirap-bagus" type="radio" name="jenis-atap"><label for="sirap-bagus">1. Bagus / Kualitas Tinggi</label></div>
+																			<div><input id="sirap-jelek" type="radio" name="jenis-atap"><label for="sirap-jelek">2. Jelek / Kualitas Rendah</label></div>
+																		</div>
+																	</div>
+																</div>
+																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																	<div>
+																		<input id="jenis-bambu2-iv" type="radio" name="jenis-atap-g"><label for="jenis-bambu2-iv">8. Bambu2</label>
+																		<div class="checkbox-nest">
+																			<div><input id="bambu2-bagus" type="radio" name="jenis-atap"><label for="bambu2-bagus">1. Bagus / Kualitas Tinggi</label></div>
+																			<div><input id="bambu2-jelek" type="radio" name="jenis-atap"><label for="bambu2-jelek">2. Jelek / Kualitas Rendah</label></div>
+																		</div>
+																	</div>
+																</div>
+																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																	<div>
+																		<input id="jenis-jerami" type="radio" name="jenis-atap-g"><label for="jenis-jerami">9. Jerami / ijuk / daun-daunan/ rumbia</label>
+																	</div>
+																</div>
+																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																	<div>
+																		<input id="jenis-lainnya" type="radio" name="jenis-atap-g"><label for="jenis-lainnya">10. Lainnya</label>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-3-10 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="jumlah-kamar-tidur-iv">6. Jumlah Kamar Tidur</label>
+														</div>
+														<div class="input-group">
+						                                    <i class="satuan">kamar</i>
+						                                    <input id="jumlah-kamar-tidur-iv" type="text" name="jumlah-kamar-tidur-iv">
+														</div> 
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-6-10 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner uk-text-left">
+														<label for="">7. Sumber Air Minum</label>
+														<div class="checkbox">
+															<div class="uk-grid">
+																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																	<div>
+																		<input id="kemasan-bermerek" type="radio" name="sumber-air-minum"><label for="kemasan-bermerek">1. Air Kemasan Bermerk</label>
+																	</div>
+																</div>
+																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																	<div>
+																		<input id="isi-ulang" type="radio" name="sumber-air-minum"><label for="isi-ulang">2. Air Isi Ulang</label>
+																	</div>
+																</div>
+																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																	<div>
+																		<input id="leding-meteran" type="radio" name="sumber-air-minum"><label for="leding-meteran">3. Leding Meteran</label>
+																	</div>
+																</div>
+																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																	<div>
+																		<input id="leding-eceran" type="radio" name="sumber-air-minum"><label for="leding-eceran">4. Leding Eceran</label>
+																	</div>
+																</div>
+																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																	<div>
+																		<input id="sumur-bor" type="radio" name="sumber-air-minum"><label for="sumur-bor">5. Sumur Bor / Pompa</label>
+																	</div>
+																</div>
+																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																	<div>
+																		<input id="sumur-terlindung" type="radio" name="sumber-air-minum"><label for="sumur-terlindung">6. Sumur Terlindung</label>
+																	</div>
+																</div>
+																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																	<div>
+																		<input id="sumur-takterlindung" type="radio" name="sumber-air-minum"><label for="sumur-takterlindung">7. Sumur Tak Terlindung</label>
+																	</div>
+																</div>
+																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																	<div>
+																		<input id="air-terlindung" type="radio" name="sumber-air-minum"><label for="air-terlindung">8. Mata Air Terlindung</label>
+																	</div>
+																</div>
+																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																	<div>
+																		<input id="air-takterlindung" type="radio" name="sumber-air-minum"><label for="air-takterlindung">9. Mata Air Tak Terlindung</label>
+																	</div>
+																</div>
+																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																	<div>
+																		<input id="air-sungai" type="radio" name="sumber-air-minum"><label for="air-sungai">10. Air Sungai / Danau / Waduk</label>
+																	</div>
+																</div>
+																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																	<div>
+																		<input id="air-hujan" type="radio" name="sumber-air-minum"><label for="air-hujan">11. Air Hujan</label>
+																	</div>
+																</div>
+																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																	<div>
+																		<input id="air-lainnya" type="radio" name="sumber-air-minum"><label for="air-lainnya">12. Lainnya</label>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner uk-text-left">
+														<label for="">8. Cara Memperoleh Air Minum</label>
+														<div class="checkbox">
+															<div class="uk-grid">
+																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																	<div>
+																		<input id="beli-eceran-iv" type="radio" name="peroleh-air"><label for="beli-eceran-iv">1. Memberi Eceran</label>
+																	</div>
+																	<div>
+																		<input id="langganan-iv" type="radio" name="peroleh-air"><label for="langganan-iv">2. Langgan</label>
+																	</div>
+																	<div>
+																		<input id="tidak-beli-iv" type="radio" name="peroleh-air"><label for="tidak-beli-iv">3. Tidak Membeli</label>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner uk-text-left">
+														<label for="">9. Sumber Penerangan Utama</label>
+														<div class="checkbox">
+															<div>
+																<input id="tembok" type="radio" name="sumber-penerangan-g"><label for="tembok">1. Listrik PLN</label>
+																<div class="checkbox-nest">
+																	<div><input id="450w" type="radio" name="sumber-penerangan"><label for="450w">1. 450 watt</label></div>
+																	<div><input id="900w" type="radio" name="sumber-penerangan"><label for="900w">2. 900 watt</label></div>
+																	<div><input id="300" type="radio" name="sumber-penerangan"><label for="300">3. 300 watt</label></div>
+																	<div><input id="2200w" type="radio" name="sumber-penerangan"><label for="2200w">4. 2.200 watt</label></div>
+																	<div><input id="besar2200w" type="radio" name="sumber-penerangan"><label for="besar2200w">5. > 2.200 watt</label></div>
+																	<div><input id="tanpa-meteran" type="radio" name="sumber-penerangan"><label for="tanpa-meteran">6. Tanpa Meteran</label></div>
+																</div>
+															</div>
+															<div>
+																<input id="non-pln" type="radio" name="sumber-penerangan-g"><label for="non-pln">2. Listrik Non PLN</label>
+															</div>
+															<div>
+																<input id="bukan-listrik" type="radio" name="sumber-penerangan-g"><label for="bukan-listrik">3. Bukan Listrik</label>
+															</div>
+														</div>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-3-10 uk-width-medium-1-3 uk-width-small-1-1">
+													<div class="data-inner uk-text-left">
+														<label for="">10. Bahan bakar / energi untuk memasak:</label>
+														<div class="checkbox">
+															<div>
+																<input id="bbm-listrik" type="radio" name="bahan-bakar-masak"><label for="bbm-listrik">1. Listrik</label>
+															</div>
+															<div>
+																<input id="bbm-gas>3g" type="radio" name="bahan-bakar-masak"><label for="bbm-gas>3g">2. Gas > 3 kg</label>
+															</div>
+															<div>
+																<input id="bbm-gas" type="radio" name="bahan-bakar-masak"><label for="bbm-gas">3. Gas kota / biogas</label>
+															</div>
+															<div>
+																<input id="bbm-minyak" type="radio" name="bahan-bakar-masak"><label for="bbm-minyak">4. Minyak tanah</label>
+															</div>
+															<div>
+																<input id="bbm-briket" type="radio" name="bahan-bakar-masak"><label for="bbm-briket">5. Briket</label>
+															</div>
+															<div>
+																<input id="bbm-arang" type="radio" name="bahan-bakar-masak"><label for="bbm-arang">6. Arang</label>
+															</div>
+															<div>
+																<input id="bbm-kayu-bakar" type="radio" name="bahan-bakar-masak"><label for="bbm-kayu-bakar">7. Kayu bakar</label>
+															</div>
+															<div>
+																<input id="bbm-tidak-masak" type="radio" name="bahan-bakar-masak"><label for="bbm-tidak-masak">8. Tidak memasak di rumah</label>
+															</div>
+														</div>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-6-10 uk-width-medium-2-3 uk-width-small-1-1">
+													<div class="data-inner uk-text-left">
+														<label for="">11. Penggunaan fasilitas tempat buang air besar: </label>
+														<div class="checkbox">
+															<div class="uk-grid">
+																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																	<div>
+																		<input id="bab-sendiri-g" type="radio" name="fasilitas-bab-g"><label for="bab-sendiri-g">1. Sendiri</label>
+																		<div class="checkbox-nest">
+																			<div><input id="sendiri-leher-angsa" type="radio" name="fasilitas-bab"><label for="sendiri-leher-angsa">1. Leher Angsa</label></div>
+																			<div><input id="sendiri-plengsengan" type="radio" name="fasilitas-bab"><label for="sendiri-plengsengan">2. Plengsengan</label></div>
+																			<div><input id="sendiri-camplung" type="radio" name="fasilitas-bab"><label for="sendiri-camplung">2. Camplung</label></div>
+																			<div><input id="sendiri-tidak-pakai" type="radio" name="fasilitas-bab"><label for="sendiri-tidak-pakai">2. Tidak Pakai</label></div>
+																		</div>
+																	</div>
+																</div>
+																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																	<div>
+																		<input id="bab-bersama-g" type="radio" name="fasilitas-bab-g"><label for="bab-bersama-g">2. Bersama</label>
+																		<div class="checkbox-nest">
+																			<div><input id="bersama-leher-angsa" type="radio" name="fasilitas-bab"><label for="bersama-leher-angsa">1. Leher Angsa</label></div>
+																			<div><input id="bersama-plengsengan" type="radio" name="fasilitas-bab"><label for="bersama-plengsengan">2. Plengsengan</label></div>
+																			<div><input id="bersama-camplung" type="radio" name="fasilitas-bab"><label for="bersama-camplung">2. Camplung</label></div>
+																			<div><input id="bersama-tidak-pakai" type="radio" name="fasilitas-bab"><label for="bersama-tidak-pakai">2. Tidak Pakai</label></div>
+																		</div>
+																	</div>
+																</div>
+																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																	<div>
+																		<input id="bab-umum-g" type="radio" name="fasilitas-bab-g"><label for="bab-umum-g">3. Umum</label>
+																		<div class="checkbox-nest">
+																			<div><input id="umum-leher-angsa" type="radio" name="fasilitas-bab"><label for="umum-leher-angsa">1. Leher Angsa</label></div>
+																			<div><input id="umum-plengsengan" type="radio" name="fasilitas-bab"><label for="umum-plengsengan">2. Plengsengan</label></div>
+																			<div><input id="umum-camplung" type="radio" name="fasilitas-bab"><label for="umum-camplung">2. Camplung</label></div>
+																			<div><input id="umum-tidak-pakai" type="radio" name="fasilitas-bab"><label for="umum-tidak-pakai">2. Tidak Pakai</label></div>
+																		</div>
+																	</div>
+																</div>
+																<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																	<div>
+																		<input id="bab-tidak-ada" type="radio" name="fasilitas-bab-g"><label for="bab-tidak-ada">4. Tidak ada</label>
+																	</div>
+																</div>
+																
+															</div>
+														</div>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-3-10 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner uk-text-left">
+														<label for="">11. Tempat pembuangan akhir tinja:</label>
+														<div class="checkbox">
+															<div>
+																<input id="tinja-tangki" type="radio" name="pembuangan-tinja"><label for="tinja-tangki">1. Tangki</label>
+															</div>
+															<div>
+																<input id="tinja-spal" type="radio" name="pembuangan-tinja"><label for="tinja-spal">2. SPAL</label>
+															</div>
+															<div>
+																<input id="lubang-tanah" type="radio" name="pembuangan-tinja"><label for="lubang-tanah">3. Lubang Tanah</label>
+															</div>
+															<div>
+																<input id="tinja-kolam-sawah" type="radio" name="pembuangan-tinja"><label for="tinja-kolam-sawah">4. Kolam / Sawah / Sungai / Danau / Laut</label>
+															</div>
+															<div>
+																<input id="tinja-pantai-tanah" type="radio" name="pembuangan-tinja"><label for="tinja-pantai-tanah">5. Pantai / Tanah Lapang / Kebun</label>
+															</div>
+															<div>
+																<input id="tinja-lainnya" type="radio" name="pembuangan-tinja"><label for="tinja-lainnya">6. Lainnya</label>
+															</div>
+														</div>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="submit">
+												<div class="uk-clearfix">
+													
+													<div class="uk-float-right">
+														<button type="button" class="f-next">Selanjutnya</button>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</fieldset>
+								
+								
+								<fieldset id="page-2" >
+									<ul id="fs-page-iv" class="daftar-input-ppfm uk-nav uk-nav-parent-icon" data-uk-nav={multiple: true}>
+										<li class="uk-parent uk-active">
+											<a href="#">Daftar Inputan Anggota Keluarga</a>
+											<ol class="uk-nav-sub uk-nav-parent-icon" data-uk-nav={multiple: true}>
+											</ol>
+										</li>
+									</ul>
+									<ul class="mcf-list">
+										<li class="mcf-item">
+											<div class="title">
+												<h4>IV. Keterangan Sosial Ekonomi Anggota Rumah Tangga</h4>
+											</div>
+											<div class="desc">
+												<p><i>Tulis siapa saja yang biasanya tinggal dan makan di rumah tangga BAIK, DEWASA, ANAK-ANAK, MAUPUN BAYI. Tuliskan nama sesuai dengan identitas, beserta Nomor Induk Kependudukan.</i></p>
+											</div>
+											<div class="data uk-grid">
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="nama-iv">1. Nama</label>
+														<input id="nama-iv" data-form-iv="nama-iv" type="text" name="nama-iv">
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="nik-iv">2. Nomor Induk Kependudukan (NIK)</label>
+														<input id="nik-iv" data-form-iv="nik-iv" type="text" name="nik-iv">
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">3. Hubungan Dengan Kepala Rumah Tangga ( Isikan KODE )</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span>Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="hub-kep-rt-iv" data-form-iv="hub-kep-rt-iv" name="hub-kep-rt-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="Kepala Rumah Tangga">1. Kepala Rumah Tangga</option>
+						                                        <option value="Suami / Istri">2. Sumai / Istri</option>
+						                                        <option value="Anak">3. Anak</option>
+						                                        <option value="Menantu">4. Menantu</option>
+						                                        <option value="Cucu">5. Cucu</option>
+						                                        <option value="Orang Tua / Mertua">6. Orang Tua / Mertua</option>
+						                                        <option value="Pembantu">7. Pembantu Ruta</option>
+						                                        <option value="Lainnya">8. Lainnya</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="nomor-urut-k-iv">4. Nomor Urut Keluarga</label>
+														<input id="no-urut-k-iv" data-form-iv="no-urut-k-iv" type="text" name="nomor-urut-k-iv">
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">5. Hubungan Dengan Kepala Keluarga ( Isikan KODE )</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="hub-kep-kel-iv" data-form-iv="hub-kep-kel-iv" name="hub-kep-kel-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="Kepala Rumah Tangga">1. Kepala Rumah Tangga</option>
+						                                        <option value="Suami / Istri">2. Sumai / Istri</option>
+						                                        <option value="Anak">3. Anak</option>
+						                                        <option value="Menantu">4. Menantu</option>
+						                                        <option value="Cucu">5. Cucu</option>
+						                                        <option value="Orang Tua / Mertua">6. Orang Tua / Mertua</option>
+						                                        <option value="Pembantu">7. Pembantu Ruta</option>
+						                                        <option value="Lainnya">8. Lainnya</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">6. Jenis Kelamin</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="jenis-kelamin-iv" data-form-iv="jenis-kelamin-iv" name="jenis-kelamin-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="Laki-Laki">1. Laki-Laki</option>
+						                                        <option value="Perempuan">2. Perempuan</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="umur-iv">7. Umur</label>
+														<input id="umur-iv" data-form-iv="umur-iv" type="text" name="umur-iv">
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">8. Status Perkawinan</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="status-kawin-iv" data-form-iv="status-kawin-iv" name="status-kawin-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="Belum Kawin">1. Belum Kawin</option>
+						                                        <option value="Kawin / Nikah">2. Kawin / Nikah</option>
+						                                        <option value="Cerai Hidup">3. Cerai Hidup</option>
+						                                        <option value="Cerai Mati">4. Cerai Mati</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">9. Kepemilikan Akta / Buku Nikah atau Akta Cerai (Isi jika status perkawinan berkode (2) atau (3))</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="kepemilikan-akta-iv" data-form-iv="kepemilikan-akta-iv" name="kepemilikan-akta-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="Tidak">0. Tidak</option>
+						                                        <option value="Ya, data ditunjukkan.">1. Ya, data ditunjukkan.</option>
+						                                        <option value="Ya, tidak dapat ditunjukkan">2. Ya, tidak dapat ditunjukkan</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">10. Tercantum Dalam Kartu Keluarga (KK) di Rumah Tangga ini</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="tercantum-dalam-kk-iv" data-form-iv="tercantum-dalam-kk-iv" name="tercantum-dalam-kk-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="1">Opsi</option>
+						                                        <option value="2">Opsi</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">11. Kepemilikan Kartu Identitas</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="kepemilikan-id-iv" data-form-iv="kepemilikan-id-iv" name="kepemilikan-id-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="1">Opsi</option>
+						                                        <option value="2">Opsi</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">12. Status Kehamilan</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="status-hamil-iv" data-form-iv="status-hamil-iv" name="status-hamil-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="1">Opsi</option>
+						                                        <option value="2">Opsi</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">13. Jenis Cacat (Isikan KODE)</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="jenis-cacat-iv" data-form-iv="jenis-cacat-iv" name="jenis-cacat-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="00">00. Tidak Cacat</option>
+						                                        <option value="01">01. Tuna Daksa / Cacat Tubuh</option>
+						                                        <option value="02">02. Tuna Netra / Buta</option>
+						                                        <option value="03">03. Tuna Rungu</option>
+						                                        <option value="04">04. Tuna Wicara</option>
+						                                        <option value="05">05. Tunga Rungu & Wicara</option>
+						                                        <option value="06">06. Tuna Netra & Cacat Tubuh</option>
+						                                        <option value="07">07. Tuna Rungu, Rungu & Wicara</option>
+						                                        <option value="08">08. Tuna Rungu, Wicara, Netra & Cacat Tubuh</option>
+						                                        <option value="09">09. Tuna Rungu, Wicara, Netra & Cacat Tubuh</option>
+						                                        <option value="10">10. Cacat Mental Retardasi</option>
+						                                        <option value="11">11. Mantan Penderita Gangguan Jiwa</option>
+						                                        <option value="12">12. Cacat Fisik & Mental</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">14. Penyakit Kronis / Menahun</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="penyakit-kronis-iv" data-form-iv="penyakit-kronis-iv" name="penyakit-kronis-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="00">Tidak Adak</option>
+						                                        <option value="01">Hipertensi (Tekanan Darah Tinggi)</option>
+						                                        <option value="02">Rematik</option>
+						                                        <option value="03">Asma</option>
+						                                        <option value="04">Masalah Jantung</option>
+						                                        <option value="05">Diabetes (Kencing Manis)</option>
+						                                        <option value="06">Tuberculosis (TBC)</option>
+						                                        <option value="07">Stroke</option>
+						                                        <option value="08">Kanker atau Tumor Ganas</option>
+						                                        <option value="09">Lainnya (gagal ginjal, paru-paru flek dan sejenisnya)</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="title">
+												<h4>Untuk Anggota Rumah Tangga 5 Tahun ke Atas</h4>
+											</div>
+											<div class="data uk-grid">
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">15. Partisipasi Sekolah</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="partisipasi-sekolah-iv" data-form-iv="partisipasi-sekolah-iv" name="hub-kep-rt-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="1">Masih Sekolah</option>
+						                                        <option value="2">Tidak Bersekolah Lagi</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">16. Jenjang & Jenis Pendidikan Tertinggi Yang Pernah / Sedang Diduduki</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="jenjang-pendidikan-iv" data-form-iv="jenjang-pendidikan-iv" name="jenjang-pendidikan-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="1">SD / SDLB</option>
+						                                        <option value="2">Paket A</option>
+						                                        <option value="3">M. Ibtidaiyah</option>
+						                                        <option value="4">SMP / SMPLB</option>
+						                                        <option value="5">Paket B</option>
+						                                        <option value="6">M. Tsanawiyah</option>
+						                                        <option value="7">SMA / SMK / SMALB</option>
+						                                        <option value="8">Paket C</option>
+						                                        <option value="9">M. Aliyah</option>
+						                                        <option value="10">Perguruan Tinggi</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">17. Kelas Tertinggi yang Pernah / Sedang Diduki</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="kelas-tertinggi-iv" data-form-iv="kelas-tertinggi-iv" name="kelas-tertinggi-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="1">1</option>
+						                                        <option value="2">2</option>
+						                                        <option value="3">3</option>
+						                                        <option value="4">4</option>
+						                                        <option value="5">5</option>
+						                                        <option value="6">6</option>
+						                                        <option value="7">7</option>
+						                                        <option value="8">8 (Tamat)</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">18. Ijazah Tertinggi yang Dimiliki</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="ijazah-tertinggi-iv" data-form-iv="ijazah-tertinggi-iv" name="hub-kep-rt-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="1">Tidak Punya Ijazah</option>
+						                                        <option value="2">SD / Sederajat</option>
+						                                        <option value="3">SMP / Sederajat</option>
+						                                        <option value="4">SMA / Sederajat</option>
+						                                        <option value="5">D4 / S1</option>
+						                                        <option value="6">S2 / S3</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">19. Bekerja / Membantu Bekerja Selama Seminggu Yang Lalu</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="bantu-kerja-iv" data-form-iv="bantu-kerja-iv" name="bantu-kerja-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="1">Opsi</option>
+						                                        <option value="2">Opsi</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">20. Lapangan Usaha Dari Pekerjaan Utama</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="usaha-utama-iv" data-form-iv="usaha-utama-iv" name="usaha-utama-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="1">Pertanian Tanaman Padi & Palawiha</option>
+						                                        <option value="2">Hortikultural</option>
+						                                        <option value="3">Perkebunan</option>
+						                                        <option value="4">Perikanan Tangkap</option>
+						                                        <option value="5">Perikanan Budayah</option>
+						                                        <option value="6">Peternakan</option>
+						                                        <option value="7">Kehutanan / Pertanian Lainnya</option>
+						                                        <option value="8">Pertambangan / Penggalian</option>
+						                                        <option value="9">Industri Pengolahan</option>
+						                                        <option value="10">Listrik & Gas</option>
+						                                        <option value="11">Bangunan / Konstruksi</option>
+						                                        <option value="12">Perdagangan</option>
+						                                        <option value="13">Hotel & Rumah Makan</option>
+						                                        <option value="14">Transportasi & Pergudangan</option>
+						                                        <option value="15">Informasi & Komunikasi</option>
+						                                        <option value="16">Keuangan & Asuransi</option>
+						                                        <option value="17">Jasa Pendidikan</option>
+						                                        <option value="18">Jasa Kesehatan</option>
+						                                        <option value="19">Jasa Kemasyarakatan, Pemerintah & Perorangan</option>
+						                                        <option value="20">Pemulung</option>
+						                                        <option value="21">Lainnya</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">21. Status Kedudukan Dalam Pekerjaan Utama</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="kedudukan-kerja-iv" data-form-iv="kedudukan-kerja-iv" name="kedudukan-kerja-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="1">Berusaha Sendiri</option>
+						                                        <option value="2">Berusaha Dibantu Buruh Tidak Tetap / Tidak Dibayar</option>
+						                                        <option value="3">Berusaha Dibantu Buruh Tetap / Dibayar</option>
+						                                        <option value="4">Buruh / Karyawan / Pegawai Swasta</option>
+						                                        <option value="5">PNS / TNI / Polri / BUMN / BUMD / anggota lgislatif</option>
+						                                        <option value="6">Pekerjaan Bebas Pertanian</option>
+						                                        <option value="7">Pekerja Bebas Non-Pertanian</option>
+						                                        <option value="8">Pekerja Keluarga / Tidak Dibayar</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="desc-2">
+												<p><i>Apakah Ada Anak Dari Kepala Keluarga Yang Masih Menjadi Tanggungan Tetapi Sedang Sekolah / Kuliah & Tidak Tinggal Dalam Ruta Ini? Jika ada, sebutkan</i></p>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="data uk-grid">
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="nama-t-iv">1. Nama</label>
+														<input id="nama-t-iv" data-form-iv="nama-t-iv" type="text" name="nama-t-iv">
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="alamat-t-iv">2. Alamat Tempat Tinggal</label>
+														<input id="alamat-t-iv" data-form-iv="alamat-t-iv" type="text" name="alamat-t-iv">
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="nik-t-iv">3. Nomor Induk Kependudukan (NIK)</label>
+														<input id="nik-t-iv" data-form-iv="nik-t-iv" type="text" name="nik-t-iv">
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="nama-sekolah-t-iv">4. Nama Sekolah</label>
+														<input id="nama-sekolah-t-iv" data-form-iv="nama-sekolah-t-iv" type="text" name="nama-sekolah-t-iv">
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="nisn-t-iv">5. NISN / NO KTM</label>
+														<input id="nisn-t-iv" data-form-iv="nisn-t-iv" type="text" name="nisn-t-iv">
+														
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="uk-alert"></div>
+										</li>
+										<li class="mcf-item">
+											<div class="submit">
+												<div class="uk-clearfix">
+													<div class="uk-float-right">
+														<button type="button" class="f-tambah-data">Tambah Data</button>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="submit">
+												<div class="uk-clearfix">
+													<div class="uk-float-left">
+														<button type="button" class="f-prev">Sebelumnya</button>
+													</div>
+													<div class="uk-float-right">
+														<button type="button" class="f-next">Selanjutnya</button>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</fieldset>
+								<fieldset id="page-3">
+									<ul class="mcf-list">										
+										<li class="mcf-item">
+											<div class="title">
+												<h4>I. Kepemilikan Aset Dan Keikutsertaan Program</h4>
+											</div>
+											<div class="data">
+												<div class="data-wrapper">
+													<div class="data-inner uk-text-left">
+														<label for="">1. Rumah Tangga Memiliki Sendiri Aset Bergerak Sebagai Berikut:</label>
+														<div class="uk-grid">
+															<div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="checkbox">
+																	<div>
+																		<input id="tabung-gas-v-g" type="radio" name="aset-bergerak-v"><label for="tabung-gas-v-g">a. Tabung gas 5.5 kg atau lebih</label>
+																		<div class="checkbox-nest">
+																			<div><input id="gas-ya" type="radio" name="aset-bergerak"><label for="gas-ya">1. Ya</label></div>
+																			
+																			<div><input id="gas-tidak" type="radio" name="aset-bergerak"><label for="gas-tidak">2. Tidak</label></div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="checkbox">
+																	<div>
+																		<input id="plesteran-iv" type="radio" name="aset-bergerak-v"><label for="plesteran-iv">b. Lemari es / kulkas</label>
+																		<div class="checkbox-nest">
+																			<div><input id="lemari-ya" type="radio" name="aset-bergerak"><label for="lemari-ya">1. Ya</label></div>
+																			
+																			<div><input id="lemari-tidak" type="radio" name="aset-bergerak"><label for="lemari-tidak">2. Tidak</label></div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="checkbox">
+																	<div>
+																		<input id="lemari-v-g" type="radio" name="aset-bergerak-v"><label for="lemari-v-g">c. AC</label>
+																		<div class="checkbox-nest">
+																			<div><input id="ac-ya" type="radio" name="aset-bergerak"><label for="ac-ya">1. Ya</label></div>
+																			
+																			<div><input id="kayu-jelek" type="radio" name="aset-bergerak"><label for="kayu-jelek">2. Tidak</label></div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="checkbox">
+																	<div>
+																		<input id="pemanas-air-g-v" type="radio" name="aset-bergerak-v"><label for="pemanas-air-g-v">d. Pemanas air (water heater)</label>
+																		<div class="checkbox-nest">
+																			<div><input id="pem-air-ya" type="radio" name="aset-bergerak"><label for="pem-air-ya">1. Ya</label></div>
+																			
+																			<div><input id="pem-air-tidak" type="radio" name="aset-bergerak"><label for="pem-air-tidak">2. Tidak</label></div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="checkbox">
+																	<div>
+																		<input id="tlp-rumah-g-v" type="radio" name="aset-bergerak-v"><label for="tlp-rumah-g-v">e. Telepon Rumah (PSTN)</label>
+																		<div class="checkbox-nest">
+																			<div><input id="tlp-rumah-ya" type="radio" name="aset-bergerak"><label for="tlp-rumah-ya">1. Ya</label></div>
+																			
+																			<div><input id="tlp-rumah-tidak" type="radio" name="aset-bergerak"><label for="tlp-rumah-tidak">2. Tidak</label></div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="checkbox">
+																	<div>
+																		<input id="tv-g-v" type="radio" name="aset-bergerak-v"><label for="tv-g-v">f. Televisi</label>
+																		<div class="checkbox-nest">
+																			<div><input id="tv-ya" type="radio" name="aset-bergerak"><label for="tv-ya">1. Ya</label></div>
+																			
+																			<div><input id="tv-tidak" type="radio" name="aset-bergerak"><label for="tv-tidak">2. Tidak</label></div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="checkbox">
+																	<div>
+																		<input id="emas-g-v" type="radio" name="aset-bergerak-v"><label for="emas-g-v">g. Emas / perhiasan & tabungan (senilai 10 gram emas)</label>
+																		<div class="checkbox-nest">
+																			<div><input id="emas-ya" type="radio" name="aset-bergerak"><label for="emas-ya">1. Ya</label></div>
+																			
+																			<div><input id="emas-tidak" type="radio" name="aset-bergerak"><label for="emas-tidak">2. Tidak</label></div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="checkbox">
+																	<div>
+																		<input id="komputer-g-v" type="radio" name="aset-bergerak-v"><label for="komputer-g-v">h. Komputer  / Laptop</label>
+																		<div class="checkbox-nest">
+																			<div><input id="komputer-ya" type="radio" name="aset-bergerak"><label for="komputer-ya">1. Ya</label></div>
+																			
+																			<div><input id="komputer-tidak" type="radio" name="aset-bergerak"><label for="komputer-tidak">2. Tidak</label></div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="checkbox">
+																	<div>
+																		<input id="sepeda-g-v" type="radio" name="aset-bergerak-v"><label for="sepeda-g-v">i. Sepeda</label>
+																		<div class="checkbox-nest">
+																			<div><input id="sepeda-ya" type="radio" name="aset-bergerak"><label for="sepeda-ya">1. Ya</label></div>
+																			
+																			<div><input id="sepeda-tidak" type="radio" name="aset-bergerak"><label for="sepeda-tidak">2. Tidak</label></div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="checkbox">
+																	<div>
+																		<input id="motor-g-v" type="radio" name="aset-bergerak-v"><label for="motor-g-v">j. Sepeda Motor</label>
+																		<div class="checkbox-nest">
+																			<div><input id="motor-ya" type="radio" name="aset-bergerak"><label for="motor-ya">1. Ya</label></div>
+																			
+																			<div><input id="motor-tidak" type="radio" name="aset-bergerak"><label for="motor-tidak">2. Tidak</label></div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="checkbox">
+																	<div>
+																		<input id="mobil-g-v" type="radio" name="aset-bergerak-v"><label for="mobil-g-v">k. Mobil</label>
+																		<div class="checkbox-nest">
+																			<div><input id="mobil-ya" type="radio" name="aset-bergerak"><label for="mobil-ya">1. Ya</label></div>
+																			
+																			<div><input id="mobil-tidak" type="radio" name="aset-bergerak"><label for="mobil-tidak">2. Tidak</label></div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="checkbox">
+																	<div>
+																		<input id="perahu-g-v" type="radio" name="aset-bergerak-v"><label for="perahu-g-v">l. Perahu</label>
+																		<div class="checkbox-nest">
+																			<div><input id="perahu-ya" type="radio" name="aset-bergerak"><label for="perahu-ya">1. Ya</label></div>
+																			
+																			<div><input id="perahu-tidak" type="radio" name="aset-bergerak"><label for="perahu-tidak">2. Tidak</label></div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="checkbox">
+																	<div>
+																		<input id="mtr-tempel-g-v" type="radio" name="aset-bergerak-v"><label for="mtr-tempel-g-v">m. Motor Tempel</label>
+																		<div class="checkbox-nest">
+																			<div><input id="mtr-tempel-ya" type="radio" name="aset-bergerak"><label for="mtr-tempel-ya">1. Ya</label></div>
+																			<div><input id="mtr-tempel-tidak" type="radio" name="aset-bergerak"><label for="mtr-tempel-tidak">2. Tidak</label></div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="checkbox">
+																	<div>
+																		<input id="mtr-perahu-g-v" type="radio" name="aset-bergerak-v"><label for="mtr-perahu-g-v">n. Perahu Motor</label>
+																		<div class="checkbox-nest">
+																			<div><input id="mtr-perahu-ya" type="radio" name="aset-bergerak"><label for="mtr-perahu-ya">1. Ya</label></div>
+																			
+																			<div><input id="mtr-perahu-tidak" type="radio" name="aset-bergerak"><label for="mtr-perahu--tidak">2. Tidak</label></div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="checkbox">
+																	<div>
+																		<input id="kapal-g-v" type="radio" name="aset-bergerak-v"><label for="kapal-g-v">o. Kapal</label>
+																		<div class="checkbox-nest">
+																			<div><input id="kapal-ya" type="radio" name="aset-bergerak"><label for="kapal-ya">1. Ya</label></div>
+																			
+																			<div><input id="kapal-tidak" type="radio" name="aset-bergerak"><label for="kapal-tidak">2. Tidak</label></div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="uk-width-large-1-1 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="data-inner uk-text-left">
+																	<label for="">2. Rumah Tangga Memiliki Aset Tidak Bergerak Sebagai Berikut:</label>
+																	<div class="data-inner-inner">
+																		<div class="uk-grid">
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="checkbox">
+																					<div>
+																						<input id="punya-aset-lahan-v" type="radio" name="rt-aset-tidak-bergerak-v"><label for="punya-aset-lahan-v">a. Lahan</label>
+																						<div class="checkbox-nest">
+																							<div class="uk-clearfix">
+																								<input id="aset-tb-ya" type="radio" name="aset-tidak-bergerak"><label class="uk-float-left" for="aset-tb-ya">a. Ya</label>
+																								<span><input id="aset-tb-ya-i" class="input-v" type="text" name=""></span>
+																							</div>
+																							
+																							<div><input id="aset-tb-tidak" type="radio" name="aset-tidak-bergerak"><label for="aset-tb-tidak">2.Tidak</label></div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="checkbox">
+																					<div>
+																						<input id="punya-aset-lain-v" type="radio" name="rt-aset-tidak-bergerak-v"><label for="punya-aset-lain-v">b. Rumah Di Tempat Lain</label>
+																						<div class="checkbox-nest">
+																							<div><input id="aset-lain-ya" type="radio" name="aset-tidak-bergerak"><label class="uk-float-left" for="aset-lain-ya">1. Ya</label></div>
+																							
+																							<div><input id="aset-lain-tidak" type="radio" name="aset-tidak-bergerak"><label for="aset-lain-tidak">2.Tidak</label></div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="uk-width-large-1-1 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="data-inner uk-text-left">
+																	<label for="">3. Jumlah Ternak Yang Dimiliki (Ekor):</label>
+																	<div class="data-inner-inner">
+																		<div class="uk-grid">
+																			<div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="checkbox">
+																					<div>
+																						<div class="uk-clearfix">
+																							<div class="uk-float-left">
+																								<input id="ternak-sapi-v" type="radio" name="ternak-v"><label for="ternak-sapi-v">a. Sapi</label>
+																							</div>
+																							<div class="uk-float-right">
+																								<input id="ternak-sapi-i-v" class="input-v" type="text" name="ternak-sapi-i-v">
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="checkbox">
+																					<div>
+																						<div class="uk-clearfix">
+																							<div class="uk-float-left">
+																								<input id="ternak-kerbau-v" type="radio" name="ternak-v"><label for="ternak-kerbau-v">b. Kerbau</label>
+																							</div>
+																							<div class="uk-float-right">
+																								<input id="ternak-kerbau-i-v" type="text" name="ternak-kerbau-v">
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="checkbox">
+																					<div>
+																						<div class="uk-clearfix">
+																							<div class="uk-float-left">
+																								<input id="ternak-kuda-v" type="radio" name="ternak-v"><label for="ternak-kuda-v">c. Kuda</label>
+																							</div>
+																							<div class="uk-float-right">
+																								<input id="ternak-kuda-i-v" type="text" name="ternak-i-v">
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="checkbox">
+																					<div>
+																						<div class="uk-clearfix">
+																							<div class="uk-float-left">
+																								<input id="ternak-babi-v" type="radio" name="ternak-v"><label for="ternak-babi-v">d. Babi</label>
+																							</div>
+																							<div class="uk-float-right">
+																								<input id="ternak-babi-i-v" type="text" name="ternak-i-v">
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="checkbox">
+																					<div>
+																						<div class="uk-clearfix">
+																							<div class="uk-float-left">
+																								<input id="ternak-domba-v" type="radio" name="ternak-v"><label for="ternak-domba-v">e. Kambing / Domba</label>
+																							</div>
+																							<div class="uk-float-right">
+																								<input id="ternak-domba-i-v" type="text" name="ternak-i-v">
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="uk-width-large-1-1 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="data-inner uk-text-left">
+																	<label for="">4. Apakah ada ART yang memiliki usaha sendiri / bersama:</label>
+																	<div class="data-inner-inner">
+																		<div class="uk-grid">
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="checkbox">
+																					<div>
+																						<input id="art-usaha-ya-v" type="radio" name="punya-aset-lain-g"><label for="art-usaha-ya-v">a. Ya</label>
+																						<div class="checkbox-nest">
+																							<div><textarea name="" id="" cols="30" rows="10"></textarea></div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="checkbox">
+																					<div>
+																						<input id="art-usaha-tida-v" type="radio" name="punya-aset-lain-g"><label for="art-usaha-tida-v">b. Tidak</label>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="uk-width-large-1-1 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="data-inner uk-text-left">
+																	<label for="">5. Rumah Tangga Menjadi Peserta Program / Memiliki Kartu Program Berikut:</label>
+																	<div class="data-inner-inner">
+																		<div class="uk-grid">
+																			<div class="uk-width-large-1-1 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="checkbox">
+																					<div>
+																						<input id="rt-kks-v" type="radio" name="rt-program-v"><label for="rt-kks-v">a. Kartu Keluarga Sejatera (KKS) Kartu Perlindungan Sosial (KPS)</label>
+																						<div class="checkbox-nest">
+																							<div><input id="kks-ya" type="radio" name="rt-peserta-program"><label for="kks-ya">1. Ya</label></div>
+																							
+																							<div><input id="kks-tidak" type="radio" name="rt-peserta-program"><label for="kks-tidak">2. Tidak</label></div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-1 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="checkbox">
+																					<div>
+																						<input id="rt-kip-v" type="radio" name="rt-program-v"><label for="rt-kip-v">b. Kartu Indonesia Pintar (KIP) / Bantuan Siswa Miskin (BSM)</label>
+																						<div class="checkbox-nest">
+																							<div><input id="kip-ya" type="radio" name="rt-peserta-program"><label for="kip-ya">1. Ya</label></div>
+																							
+																							<div><input id="kip-tidak" type="radio" name="rt-peserta-program"><label for="kip-tidak">2. Tidak</label></div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-1 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="checkbox">
+																					<div>
+																						<input id="rt-kis-v" type="radio" name="rt-program-v"><label for="rt-kis-v">c. Kartu Indonesia Sehat (KIS) / BPJS Kesehatan / Jamkesmas</label>
+																						<div class="checkbox-nest">
+																							<div><input id="kis-ya" type="radio" name="rt-peserta-program"><label for="kis-ya">1. Ya</label></div>
+																							
+																							<div><input id="kayu-jelek" type="radio" name="rt-peserta-program"><label for="kayu-jelek">2. Tidak</label></div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-1 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="checkbox">
+																					<div>
+																						<input id="rt-bpjs-v" type="radio" name="rt-program-v"><label for="rt=bpjs-">d. BPJS Kesehatan perserta mandiri</label>
+																						<div class="checkbox-nest">
+																							<div><input id="bpjs-ya" type="radio" name="rt-peserta-program"><label for="bpjs-ya">1. Ya</label></div>
+																							
+																							<div><input id="bpjs-tidak" type="radio" name="rt-peserta-program"><label for="bpjs-tidak">2. Tidak</label></div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-1 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="checkbox">
+																					<div>
+																						<input id="rt-jamsostel-v" type="radio" name="rt-program-v"><label for="rt-jamsostel-v">e. Jaminan sosial tenaga kerja (Jamsostek) / BPJS Ketenagarkerjaan</label>
+																						<div class="checkbox-nest">
+																							<div><input id="jamsostek-ya" type="radio" name="rt-peserta-program"><label for="jamsostek-ya">1. Ya</label></div>
+																							
+																							<div><input id="jamsostek-tidak" type="radio" name="rt-peserta-program"><label for="jamsostek-tidak">2. Tidak</label></div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-1 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="checkbox">
+																					<div>
+																						<input id="asuransi-kes-v" type="radio" name="rt-program-v"><label for="asuransi-kes-v">f. Asuransi Kesehatan Lainnya</label>
+																						<div class="checkbox-nest">
+																							<div><input id="askes-ya" type="radio" name="rt-peserta-program"><label for="askes-ya">1. Ya</label></div>
+																							
+																							<div><input id="askes-tidak" type="radio" name="rt-peserta-program"><label for="askes-tidak">2. Tidak</label></div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-1 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="checkbox">
+																					<div>
+																						<input id="rt-phk-v" type="radio" name="rt-program-v"><label for="rt-phk-v">g. Program Keluarga Harapan (PKH)</label>
+																						<div class="checkbox-nest">
+																							<div><input id="phk-ya" type="radio" name="rt-peserta-program"><label for="phk-ya">1. Ya</label></div>
+																							
+																							<div><input id="phk-tidak" type="radio" name="rt-peserta-program"><label for="phk-tidak">2. Tidak</label></div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-1 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="checkbox">
+																					<div>
+																						<input id="rt-raskin-v" type="radio" name="rt-program-v"><label for="rt-raskin-v">g. Beras Untuk Orang Miskin (Raskin)</label>
+																						<div class="checkbox-nest">
+																							<div><input id="raskin-ya" type="radio" name="rt-peserta-program"><label for="raskin-ya">1. Ya</label></div>
+																							
+																							<div><input id="raskin-tidak" type="radio" name="rt-peserta-program"><label for="raskin-tidak">2. Tidak</label></div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-1 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="checkbox">
+																					<div>
+																						<input id="rt-kur-v" type="radio" name="rt-program-v"><label for="rt-kur-v">g. Kredit Usaha Rakyat (KUR)</label>
+																						<div class="checkbox-nest">
+																							<div><input id="kur-ya" type="radio" name="rt-peserta-program"><label for="kur-ya">1. Ya</label></div>
+																							
+																							<div><input id="kur-tidak" type="radio" name="rt-peserta-program"><label for="kur-tidak">2. Tidak</label></div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="submit">
+												<div class="uk-clearfix">
+													<div class="uk-float-left">
+														<button type="button" class="f-prev">Sebelumnya</button>
+													</div>
+													<div class="uk-float-right">
+														<button type="submit" class="f-submit">Simpan</button>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</fieldset>
+								
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer id="globalfooter" class="globalfooter">
+		<div class="gf-content uk-clearfix">
+			<div class="gf-item uk-float-left">
+				<p>2017 Bappeda Kabupaten Soppeng. <span">Developer</span></p>
+			</div>
+			<div class="gf-item uk-float-right">
+				<a href="" class="uk-button" data-uk-smooth-scroll>Kembali Ke Atas <i class="uk-icon-angle-up"></i></a>
+			</div>
+		</div>
+	</footer>
+	<!-- <script src="assets/js/scripts.js"></script> -->
+</body>
+</html>

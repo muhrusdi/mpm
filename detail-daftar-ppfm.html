@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Detail Daftar PPFM</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="assets/stylesheets/base.css">
+	<link rel="stylesheet" href="assets/stylesheets/fonts.css">
+	<link rel="stylesheet" href="assets/stylesheets/main.css">
+	<link rel="stylesheet" href="assets/stylesheets/jquery-ui.min.css">
+	<link rel="stylesheet" href="assets/stylesheets/MonthPicker.css">
+
+	<script src="assets/scripts/jquery.min.js"></script>
+	<script src="assets/scripts/uikit.min.js"></script>
+	<script src="assets/scripts/form-select.min.js"></script>
+	<script src="assets/scripts/jquery-ui.min.js"></script>
+	<script src="assets/scripts/MonthPicker.min.js"></script>
+	<script src="assets/scripts/formcache.min.js"></script>
+	<script src="assets/scripts/circle-progress.min.js"></script>
+	<script src="assets/scripts/notify.min.js"></script>
+	<script src="assets/scripts/datepicker.min.js"></script>
+	<script src="assets/scripts/sticky.min.js"></script>
+	<script src="assets/scripts/main.js"></script>
+</head>
+<body>
+	<nav id="globalnav" class="globalnav uk-navbar">
+		<ul class="gn-logo">
+			<li class="gn-hidden"><a href="#">sipakatau</a></li>
+			<li><button id="toggle-side"><i class="uk-icon-navicon uk-icon-small"></i></button></li>
+		</ul>
+		<div class="uk-navbar-flip gn-account">
+			<ul class="gn-account-list">
+				<li>
+					<div class="link" data-uk-dropdown="{mode:'click'}">
+						<ul>
+							<li><div class="image"><img src="assets/images/user_icon.png" alt=""></div></li>
+							<li class="uk-hidden-medium uk-hidden-small"><span>Muhammad Rusdi</span></li>
+							<li><span><i class="uk-icon-angle-down"></i></span></li>
+						</ul>
+						<div class="uk-dropdown uk-dropdown-bottom">
+							<ul>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="globalnav-placeholder"></div>
+	<div class="main">
+		<div class="m-sidebar">
+			<div>
+				<div class="ms-account uk-text-center">
+					<div class="msa-image">
+						<div class="msa-image-inner">
+							<img src="assets/images/user_icon.png" alt="">
+						</div>
+					</div>
+					<div class="msa-text">
+						<div class="msa-text-wrapper">
+							<div class="msa-text-inner">
+								<h2>Muhammad Rusdi</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+				<nav class="ms-nav">
+					<ul class="msn-list uk-nav uk-nav-side uk-nav-parent-icon" data-uk-nav="{multiple:true}">
+						<li class="msn-item uk-parent">
+							<a href="#" class="msn-link"><i class="uk-icon-home"></i>Dashboard</a>
+							<ul class="uk-nav-sub">
+								<li><a href="index.html"><i class="uk-icon-circle-o"></i>Peta Wilayah PPFM</a></li>
+								<li><a href="#"><i class="uk-icon-circle-o"></i>Laporan Peserta PPFM</a></li>
+							</ul>
+						</li>
+						<li class="msn-item uk-parent">
+							<a href="#" class="msn-link"><i class="uk-icon-edit"></i>Menu MPM</a>
+							<ul class="uk-nav-sub">
+								<li><a href="register-mpm.html"><i class="uk-icon-circle-o"></i>Pendaftaran MPM</a></li>
+								<li><a href="#"><i class="uk-icon-circle-o"></i>Daftar Pesrta MPM</a></li>
+							</ul>
+
+						</li>
+						<li class="msn-item uk-parent uk-active">
+							<a href="#" class="msn-link"><i class="uk-icon-file-text"></i>Menu PPFM</a>
+							<ul class="uk-nav-sub">
+								<li  class="uk-active"><a href="register-ppfm.html"><i class="uk-icon-circle-o"></i>Pendaftaran PPFM</a></li>
+								<li><a href="#"><i class="uk-icon-circle-o"></i>Perubahan Data PPFM</a></li>
+								<li><a href="peserta-ppfm.html"><i class="uk-icon-circle-o"></i>Daftar Peserta PPFM</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div id="pendaftaran-mpm-content" class="m-content">
+			<div class="mc-header">
+				<style>
+					#pendaftaran-mpm-content > .mc-header {
+						background: url('assets/images/pmpm.jpg') no-repeat center center;
+    					background-size: cover;
+					}
+				</style>
+				<div class="mch-text">
+					<h2>Pendaftaran PPFM</h2>
+				</div>
+			</div>
+			<div class="mc-breadcrumb" data-uk-sticky="{top:60}">
+				<ul class="uk-breadcrumb">
+					<li><a href="#">Menu PPFM</a></li>
+					<li><a href="#">Daftar Peserta PPFM</a></li>
+					<li><a href="#">Rincian</a></li>
+					<li><a href="#">Halaman <span id="count-page"></span></a></li>
+				</ul>
+			</div>
+			<div class="mc-form mc-form-detail">
+				<div class="mc-form-wrapper">
+					<div class="mc-form-inner">
+						<div id="pendaftaran-ppfm" class="mcf-detail-page">
+							<div class="mcf-content">
+								<div class="mcf-title">
+									<h3>Rincian Peserta Pendaftaran Data Terpadu Program Penanganan Fakir Miskin</h3>
+								</div>
+								
+								<fieldset id="page-1">
+									<ul class="mcf-list">										
+										<li class="mcf-item">
+											<div class="title">
+												<h4>I. Rincian Pengenalan Tempat</h4>
+											</div>
+											<div class="data uk-grid">
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="provinsi-1">1. Provinsi</label>
+														<input id="provinsi-1" type="text" name="provinsi-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="kabupaten-1">2. Kabupaten / Kota</label>
+														<input id="kabupaten-1" type="text" name="kabupaten-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="kecamatan-1">3. Kecamatan / Kota</label>
+														<input id="kecamatan-1" type="text" name="kecamatan-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="desa-1">4. Kabupaten / Kota</label>
+														<input id="desa-1" type="text" name="desa-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="sls-1">5. Nama SLS</label>
+														<input id="sls-1" type="text" name="sls-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="alamat-1">6. Alamat</label>
+														<input id="alamat-1" type="text" name="alamat-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="no-uru-rt-1">7. Nomor Urut Rumah Tangga (Dari PBDT 2015. FKP Kolom (1))</label>
+														<input id="no-uru-rt-1" type="text" name="no-uru-rt-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="nama-krt-1">7/ nama KRT</label>
+														<input id="nama-krt-1" type="text" name="nama-krt-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="jum-krt-1">9. Jumlah ART</label>
+														<input id="jum-krt-1" type="text" name="jum-krt-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="jum-kel-1">7. Jumlah Keluarga</label>
+														<input id="jum-kel-1" type="text" name="jum-kel-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="title">
+												<h4>II. Keterang Petugas & Responden</h4>
+											</div>
+											<div class="data uk-grid">
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="tgl-pencacahan-1">1. Tanggal Pencacah</label>
+														<input id="tgl-pencacahan-1" class="ttl" type="text" name="tgl-pencacahan-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="nama-pencacah-1">2. Nama Pencacah</label>
+														<input id="nama-pencacah-1" type="text" name="nama-pencacah-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="tgl-pemeriksaan-1">1.Tanggal Pemeriksa</label>
+														<input id="tgl-pemeriksaan-1" class="ttl" type="text" name="tgl-pemeriksaan-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="nama-pencacah-1">4. Nama Pemeriksa</label>
+														<input id="nama-pencacah-1" type="text" name="nama-pencacah-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="hasil-cacah-rt-1">5. Hasil Pencacahan Rumah Tangga:</label>
+														<input id="hasil-cacah-rt-1" type="text" name="hasil-cacah-rt-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="title">
+												<h4>III. Keterangan Perumahan</h4>
+											</div>
+											<div class="data uk-grid">
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="penguasaan-tt-1">1.a. Status Penguasaan Bangunan Tempat Tinggal Yang Ditempati</label>
+														<input id="penguasaan-tt-1" type="text" name="penguasaan-tt-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="lahan-tt-1">1.b. Status Lahan Tempat Tinggal Yang Ditempati</label>
+														<input id="lahan-tt-1" type="text" name="lahan-tt-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="luas-lantai-1">2. Luas Lantai</label>
+														<input id="luas-lantai-1" type="text" name="luas-lantai-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="lantai-terluas-1">3. Jenis Lantai Terluas</label>
+														<input id="lantai-terluas-1" type="text" name="lantai-terluas-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="luas-lantai-a-1">4a. Luas Lantai</label>
+														<input id="luas-lantai-a-1" type="text" name="luas-lantai-a-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="jensi-ata-terluas-1">5a. Jenis Atap Terluas</label>
+														<input id="jensi-ata-terluas-1" type="text" name="jensi-ata-terluas-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="kamar-tidur-1">6. Jumlah Kamar Tidur</label>
+														<input id="kamar-tidur-1" type="text" name="kamar-tidur-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="sumber-air-minum-1">7. Sumber Air Minum</label>
+														<input id="sumber-air-minum-1" type="text" name="sumber-air-minum-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="peroleh-air-1">8. Cara Memperoleh Air</label>
+														<input id="peroleh-air-1" type="text" name="peroleh-air-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="sumber-air-minum-1">9. Sumber Air Minum</label>
+														<input id="sumber-air-minum-1" type="text" name="sumber-air-minum-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="peroleh-air-minum-1">8. Cara Memperoleh Air Minum</label>
+														<input id="peroleh-air-minum-1" type="text" name="peroleh-air-minum-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="penerangan-utama-1">9a. Sumber Penerangan Utama</label>
+														<input id="penerangan-utama-1" type="text" name="penerangan-utama-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="bahan-bakar-masak-1">10. Bahan bakar / energi untuk memasak</label>
+														<input id="bahan-bakar-masak-1" type="text" name="bahan-bakar-masak-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="filitas-bab-1">11a. Penggunaan fasilitas tempat buang air besar:</label>
+														<input id="filitas-bab-1" type="text" name="filitas-bab-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="pembuangan-akhir-tinja-1">12. Tempat pembuangan akhir tinja:</label>
+														<input id="pembuangan-akhir-tinja-1" type="text" name="pembuangan-akhir-tinja-1" readonly>
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="submit">
+												<div class="uk-clearfix">
+													
+													<div class="uk-float-right">
+														<button type="button" class="f-next">Selanjutnya</button>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</fieldset>
+								
+								
+								<fieldset id="page-2" >
+									<ul class="mcf-list">
+										<li class="mcf-item">
+											<div class="title">
+												<h4>IV. Rincian Keterangan Sosial Ekonomi Anggota Rumah Tangga</h4>
+											</div>
+											<div class="data uk-grid">
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="nama-iv">1. Nama</label>
+														<input id="nama-iv" data-form-iv="nama-iv" type="text" name="nama-iv" readonly>
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="nik-iv">2. Nomor Induk Kependudukan (NIK)</label>
+														<input id="nik-iv" type="text" name="nik-iv" readonly>
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="hub-kep-rt-iv">3. Hubungan Dengan Kepala Rumah Tangga</label>
+														<input id="hub-kep-rt-iv" type="text" name="hub-kep-rt-iv" readonly>
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="nomor-urut-k-iv">4. Nomor Urut Keluarga</label>
+														<input id="no-urut-k-iv" type="text" name="nomor-urut-k-iv" readonly>
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="hub-kk-iv">5. Hubungan Dengan Kepala Keluarga</label>
+														<input id="hub-kk-iv" type="text" name="hub-kk-iv" readonly>
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="jenis-kelamin-iv">6. Jenis Kelamin</label>
+														<input id="jenis-kelamin-iv" type="text" name="jenis-kelamin-iv" readonly>
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="umur-iv">7. Umur</label>
+														<input id="umur-iv" type="text" name="umur-iv" readonly>
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="status-kawin-iv">8. Status Perkawinan</label>
+														<input id="status-kawin-iv" type="text" name="status-kawin-iv" readonly>
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="akta-nikah-iv">9. Kepemilikan Akta / Buku akta-nikahah Atau Akta Cerai</label>
+														<input id="akta-nikah-iv" type="text" name="akta-nikah-iv" readonly>
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="tercantum-dalam-kk-iv">10. Nomor Induk Kependudukan (tercantum-dalam-kk)</label>
+														<input id="tercantum-dalam-kk-iv" type="text" name="tercantum-dalam-kk-iv" readonly>
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="kepemilikan-id-iv">11. Nomor Induk Kependudukan (NIK)</label>
+														<input id="kepemilikan-id-iv" type="text" name="kepemilikan-id-iv" readonly>
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="status-hamil-iv">12. Status Kehamilan</label>
+														<input id="status-hamil-iv" type="text" name="status-hamil-iv" readonly>
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="jenis-cacat-iv">13. Jenis Cacat</label>
+														<input id="jenis-cacat-iv" type="text" name="jenis-cacat-iv" readonly>
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="sakit-kronis-iv">14. Penyakit Kronis / Menahun</label>
+														<input id="sakit-kronis-iv" type="text" name="sakit-kronis-iv" readonly>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="title">
+												<h4>Untuk Anggota Rumah Tangga 5 Tahun ke Atas</h4>
+											</div>
+											<div class="data uk-grid">
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="partisipasi-sekolah-iv">15. Partisipasi Sekolah</label>
+														<input id="partisipasi-sekolah-iv" type="text" name="partisipasi-sekolah-iv" readonly>
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="pendidikan-tertinggi-iv">16. Pendidikan Tertinggi</label>
+														<input id="pendidikan-tertinggi-iv" type="text" name="pendidikan-tertinggi-iv" readonly>
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="kelas-tertinggi-iv">17. Kelas Tertinggi</label>
+														<input id="kelas-tertinggi-iv" type="text" name="kelas-tertinggi-iv" readonly>
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="ijazah-tertinggi-iv">18. Ijazah Tertinggi Yang Dimiliki</label>
+														<input id="ijazah-tertinggi-iv" data-form-iv="ijazah-tertinggi-iv" type="text" name="ijazah-tertinggi-iv" readonly>
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="pekerjaan-seminggu-iv">19. Bekerja / Membantu Bekerja Selama Seminggu Yang Lalu</label>
+														<input id="pekerjaan-seminggu-iv" type="text" name="pekerjaan-seminggu-iv" readonly>
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="lapangan-usaha-iv">20. Lapangan Usaha Dari Pekerjaan Utama</label>
+														<input id="lapangan-usaha-iv" type="text" name="lapangan-usaha-iv" readonly>
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="kedudukan-dalam-kerja-iv">21. Status Kedudukan Dalam Pekerjaan Utama</label>
+														<input id="kedudukan-dalam-kerja-iv" type="text" name="kedudukan-dalam-kerja-iv" readonly>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="title">
+												<h4>Rincian Data Anak Yang Tidak Tinggal Dalam Ruta</h4>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="data uk-grid">
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="nama-t-iv">1. Nama</label>
+														<input id="nama-t-iv" type="text" name="nama-t-iv" readonly>
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="alamat-t-iv">2. Alamat Tempat Tinggal</label>
+														<input id="alamat-t-iv" type="text" name="alamat-t-iv" readonly>
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="nik-t-iv">3. Nomor Induk Kependudukan (NIK)</label>
+														<input id="nik-t-iv" type="text" name="nik-t-iv" readonly>
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="nama-sekolah-t-iv">4. Nama Sekolah</label>
+														<input id="nama-sekolah-t-iv" type="text" name="nama-sekolah-t-iv" readonly>
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="nisn-t-iv">5. NISN / NO KTM</label>
+														<input id="nisn-t-iv" type="text" name="nisn-t-iv" readonly>
+														
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="submit">
+												<div class="uk-clearfix">
+													<div class="uk-float-left">
+														<button type="button" class="f-prev">Sebelumnya</button>
+													</div>
+													<div class="uk-float-right">
+														<button type="button" class="f-next">Selanjutnya</button>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</fieldset>
+								<fieldset id="page-3">
+									<ul class="mcf-list">										
+										<li class="mcf-item">
+											<div class="title">
+												<h4>V. Rincian Kepemilikan Aset Dan Keikutsertaan Program</h4>
+											</div>
+											<div class="data">
+												<div class="data-wrapper">
+													<div class="data-inner uk-text-left">
+														<div class="uk-grid">
+															<div class="uk-width-large-1-1 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="data-inner uk-text-left">
+																	<label for="">1. Rumah Tangga Memiliki Sendiri Aset Bergerak Sebagai Berikut:</label>
+																	<div class="data-inner-inner">
+																		<div class="uk-grid">
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<label for="tabung-gas-v">a. Tabung gas 5.5 kg atau lebih</label>
+																					<input id="tabung-gas-v" type="text" name="tabung-gas-iv" readonly value="1. Ya">
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<label for="kulkas-v">b. Lemari es / kulkas</label>
+																					<input id="kulkas-v" type="text" name="kulkas-iv" readonly value="1. Ya">
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<label for="ac-v">c. AC</label>
+																					<input id="ac-v" type="text" name="ac-v" readonly value="1. Ya">
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<label for="pemanas-air-v">d. Pemanas Air</label>
+																					<input id="pemanas-air-v" type="text" name="pemanas-air-v" readonly value="1. Ya">
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<label for="telp-rumah-v">e. Telepon Rumah (PSTN)</label>
+																					<input id="telp-rumah-v" type="text" name="telp-rumah-iv" readonly>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<label for="tv-v">f. Televisi</label>
+																					<input id="tv-v" type="text" name="tv-v" readonly>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<label for="perhiasan-v">g. Emas / Perhiasan & tabungan (senilai 10 gram emas)</label>
+																					<input id="perhiasan-v" type="text" name="perhiasan-v" readonly>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<label for="komputer-v">h. Komputer / Laptop</label>
+																					<input id="komputer-v" type="text" name="komputer-v" readonly>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<label for="sepeda-v">i. Sepeda</label>
+																					<input id="sepeda-v" type="text" name="sepeda-v" readonly>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															
+															<div class="uk-width-large-1-1 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="data-inner uk-text-left">
+																	<label for="">2. Rumah Tangga Memiliki Aset Tidak Bergerak Sebagai Berikut:</label>
+																	<div class="data-inner-inner">
+																		<div class="uk-grid">
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<label for="lahan-v">a. Lahan</label>
+																					<input id="lahan-v" type="text" name="lahan-v" readonly>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<label for="rumah-tempat-lain-v">b. Rumah di tempat lain</label>
+																					<input id="rumah-tempat-lain-v" type="text" name="rumah-tempat-lain-v" readonly>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="uk-width-large-1-1 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="data-inner uk-text-left">
+																	<label for="">3. Jumlah Ternak Yang Dimiliki (Ekor):</label>
+																	<div class="data-inner-inner">
+																		<div class="uk-grid">
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<label for="sapi-v">a. Sapi</label>
+																					<input id="sapi-v" type="text" name="sapi-v" readonly>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="uk-width-large-1-1 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="data-inner uk-text-left">
+																	<label for="">4. Usaha Yang Dimiliki Sendiri Atau Bersama:</label>
+																	<div class="data-inner-inner">
+																		<div class="uk-grid">
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<label for="tv-v">a. Sapi</label>
+																					<input id="tv-v" type="text" name="tv-v" readonly value="2 ekor">
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<input id="tv-v" type="text" name="tv-v" readonly value="2. Tidak">
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="uk-width-large-1-1 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="data-inner uk-text-left">
+																	<label for="">5. Rumah Tangga Menjadi Peserta Program / Memiliki Kartu Program Berikut:</label>
+																	<div class="data-inner-inner">
+																		<div class="uk-grid">
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<label for="tv-v">a. Kartu Keluarga Sejahtera (KKS) Kartu Perlindungan Sosial (KPS)</label>
+																					<input id="tv-v" type="text" name="tv-v" readonly value="2. Tidak">
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<label for="tv-v">b. Kartu Indonesia Pintar (KIP)</label>
+																					<input id="tv-v" type="text" name="tv-v" readonly>
+																				</div>
+																			</div>
+																			
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="submit">
+												<div class="uk-clearfix">
+													<div class="uk-float-left">
+														<button type="button" class="f-prev">Sebelumnya</button>
+													</div>
+													
+												</div>
+											</div>
+										</li>
+									</ul>
+								</fieldset>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer id="globalfooter" class="globalfooter">
+		<div class="gf-content uk-clearfix">
+			<div class="gf-item uk-float-left">
+				<p>2017 Bappeda Kabupaten Soppeng. <span">Developer</span></p>
+			</div>
+			<div class="gf-item uk-float-right">
+				<a href="" class="uk-button" data-uk-smooth-scroll>Kembali Ke Atas <i class="uk-icon-angle-up"></i></a>
+			</div>
+		</div>
+	</footer>
+	<!-- <script src="assets/js/scripts.js"></script> -->
+</body>
+</html>

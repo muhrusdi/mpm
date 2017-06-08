@@ -1,0 +1,24 @@
+{
+  "name": "mpm",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "muhrusdi"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-ui": "^1.12.1",
+    "jquery-circle-progress": "^1.2.2",
+    "webui-popover": "^2.1.15",
+    "jquery-ui-month-picker": "^3.0.4",
+    "uikit": "#v2/dist"
+  }
+}

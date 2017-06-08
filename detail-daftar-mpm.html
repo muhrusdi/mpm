@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Detail Peserta MPM</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="assets/stylesheets/base.css">
+	<link rel="stylesheet" href="assets/stylesheets/fonts.css">
+	<link rel="stylesheet" href="assets/stylesheets/main.css">
+	<link rel="stylesheet" href="assets/stylesheets/jquery-ui.min.css">
+	<link rel="stylesheet" href="assets/stylesheets/MonthPicker.css">
+
+	<script src="assets/scripts/jquery.min.js"></script>
+	<script src="assets/scripts/uikit.min.js"></script>
+	<script src="assets/scripts/form-select.min.js"></script>
+	<script src="assets/scripts/jquery-ui.min.js"></script>
+	<script src="assets/scripts/MonthPicker.min.js"></script>
+	<script src="assets/scripts/formcache.min.js"></script>
+	<script src="assets/scripts/notify.min.js"></script>
+	<script src="assets/scripts/sticky.min.js"></script>
+	<script src="assets/scripts/main.js"></script>
+</head>
+<body>
+	<nav id="globalnav" class="globalnav uk-navbar">
+		<ul class="gn-logo">
+			<li class="gn-hidden"><a href="#">sipakatau</a></li>
+			<li><button id="toggle-side"><i class="uk-icon-navicon uk-icon-small"></i></button></li>
+		</ul>
+		<div class="uk-navbar-flip gn-account">
+			<ul class="gn-account-list">
+				<li>
+					<div class="link" data-uk-dropdown="{mode:'click'}">
+						<ul>
+							<li><div class="image"><img src="assets/images/user_icon.png" alt=""></div></li>
+							<li class="uk-hidden-medium uk-hidden-small"><span>Muhammad Rusdi</span></li>
+							<li><span><i class="uk-icon-angle-down"></i></span></li>
+						</ul>
+						<div class="uk-dropdown uk-dropdown-bottom">
+							<ul>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="globalnav-placeholder"></div>
+	<div class="main">
+		<div class="m-sidebar">
+			<div>
+				<div class="ms-account uk-text-center">
+					<div class="msa-image">
+						<div class="msa-image-inner">
+							<img src="assets/images/user_icon.png" alt="">
+						</div>
+					</div>
+					<div class="msa-text">
+						<div class="msa-text-wrapper">
+							<div class="msa-text-inner">
+								<h2>Muhammad Rusdi</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+				<nav class="ms-nav">
+					<ul class="msn-list uk-nav uk-nav-side uk-nav-parent-icon" data-uk-nav="{multiple:true}">
+						<li class="msn-item uk-parent">
+							<a href="#" class="msn-link"><i class="uk-icon-home"></i>Dashboard</a>
+							<ul class="uk-nav-sub">
+								<li><a href="index.html"><i class="uk-icon-circle-o"></i>Peta Wilayah PPFM</a></li>
+								<li><a href="#"><i class="uk-icon-circle-o"></i>Laporan Peserta PPFM</a></li>
+							</ul>
+						</li>
+						<li class="msn-item uk-parent uk-active">
+							<a href="#" class="msn-link"><i class="uk-icon-edit"></i>Menu MPM</a>
+							<ul class="uk-nav-sub">
+								<li class="uk-active"><a href="register-mpm.html"><i class="uk-icon-circle-o"></i>Pendaftaran MPM</a></li>
+								<li><a href="peserta-ppfm.html"><i class="uk-icon-circle-o"></i>Daftar Pesrta MPM</a></li>
+							</ul>
+
+						</li>
+						<li class="msn-item uk-parent">
+							<a href="#" class="msn-link"><i class="uk-icon-file-text"></i>Menu PPFM</a>
+							<ul class="uk-nav-sub">
+								<li><a href="register-ppfm.html"><i class="uk-icon-circle-o"></i>Pendaftaran PPFM</a></li>
+								<li><a href="#"><i class="uk-icon-circle-o"></i>Perubahan Data PPFM</a></li>
+								<li><a href="peserta-ppfm.html"><i class="uk-icon-circle-o"></i>Daftar Peserta PPFM</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div id="pendaftaran-mpm-content" class="m-content">
+			<div class="mc-header">
+				<style>
+					#pendaftaran-mpm-content > .mc-header {
+						background: url('assets/images/pmpm.jpg') no-repeat center center;
+    					background-size: cover;
+					}
+				</style>
+				<div class="mch-text">
+					<h2>Pendaftaran MPM</h2>
+				</div>
+			</div>
+			<div class="mc-breadcrumb" data-uk-sticky="{top:60}">
+				<ul class="uk-breadcrumb">
+					<li><a href="#">Menu MPM</a></li>
+					<li><a href="#">Daftar Peserta MPM</a></li>
+					<li><a href="#">Rincian</a></li>
+				</ul>
+			</div>
+			<div class="mc-form">
+				<div class="mc-form-wrapper">
+					<div class="mc-form-inner">
+						<div class="mcf-detail-page">
+							<div class="mcf-content">
+								<div class="mcf-title">
+									<h3>Rincian Peserta Pendaftaran Rumah Tangga Miskin Dan Kurang Mampu</h3>
+								</div>
+								<ul class="mcf-list">
+									<li class="mcf-item">
+										<div class="title">
+											<h4>I. Rincian Informasi Pendaftaran</h4>
+										</div>
+										<div class="data uk-grid">
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="nik">1. NIK (Nomor Induk Kependudukan)</label>
+													<input id="nik" type="text" name="nik" readonly value="1234567890">
+													
+												</div>
+											</div>
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="namaLengkap">2. Nama Lengkap Sesuai KTP)</label>
+													<input id="namaLengkap" type="text" name="namaLengkap" readonly>
+												</div>
+											</div>
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="jenis-kelamin">3. Jenis Kelamin</label>
+													<input id="jenis-kelamin" type="text" name="jenis-kelamin" readonly>
+												</div>
+											</div>
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="nomorKk">4. Nomor Kartu Keluarga</label>
+													<input id="nomorKk" type="text" name="nomorKk" readonly>
+													
+												</div>
+											</div>
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="hubKeluarga">5. Hubungan Dengan Kepala Keluarga</label>
+													<input id="hubKeluarga" type="text" name="hubKeluarga" readonly>
+													
+												</div>
+											</div>
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="hubKepalaRt">6. Hubungan Dengan Kepala Rumah Tangga</label>
+													<input id="hubKepalaRt" type="text" name="hubKepalaRt" readonly>
+													
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="mcf-item">
+										<div class="title">
+											<h4>II. Rincian Infomasi Rumah Tangga</h4>
+										</div>
+										<div class="data uk-grid">
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="nikKepRt">7. NIK Kepala Rumah Tangga</label>
+													<input id="nikKepRt" type="text" name="nikKepRt" readonly>
+													
+												</div>
+											</div>
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="namaKepRt">8. Nama Kepala Rumah Tangga</label>
+													<input id="namaKepRt" type="text" name="namaKepRt" readonly>
+												</div>
+											</div>
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="namaKepRt">9. Jenis Kelamin</label>
+													<input id="namaKepRt" type="text" name="namaKepRt" readonly>
+												</div>
+											</div>
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="btl-rt">10. Bulan & Tahun Lahir Kepala Rumah Tangga</label>
+													<input id="btl-rt" type="text" name="btl-rt" readonly>
+												</div>
+											</div>
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="pekerjaan-kep-rt">11. Status Pekerjaan Kepala Rumah Tangga</label>
+													<input id="pekerjaan-kep-rt" type="text" name="pekerjaan-kep-rt" readonly>
+												</div>
+											</div>
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="jumAngKel">12. Jumlah Anggota Keluarga</label>
+													<input id="jumAngKel" type="text" name="jumAngKel" readonly>
+													
+												</div>
+											</div>
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="provinsi">13. Provinsi</label>
+													<input id="provinsi" type="text" name="provinsi" readonly>
+												</div>
+											</div>
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="kabupate">14. Kabupate</label>
+													<input id="kabupate" type="text" name="kabupate" readonly>
+												</div>
+											</div>
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="kecamatan">15. Kabupate</label>
+													<input id="kecamatan" type="text" name="kecamatan" readonly>
+												</div>
+											</div>
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="lurahDesa">16. Kelurahan / Desa</label>
+													<input id="lurahDesa" type="text" name="lurahDesa" readonly>
+													
+												</div>
+											</div>
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="namaJalan">17. Nama Jalam / ( RT / RW)</label>
+													<input id="namaJalan" type="text" name="namaJalan" readonly>
+													
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="mcf-item">
+										<div class="title">
+											<h4>III. Rincian Informasi Bangunan Tempat Tinggal</h4>
+										</div>
+										<div class="data uk-grid">
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="kepemilikian-bangunan">18. Status Kepemilikan Bangunan Tempat Tinggal</label>
+													<input id="kepemilikian-bangunan" type="text" name="kepemilikian-bangunan" readonly>
+												</div>
+											</div>
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="bba-rt">19. Bahan Bangunan Utama Atap Rumah Terluas</label>
+													<input id="bba-rt" type="text" name="bba-rt" readonly>
+												</div>
+											</div>
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="bbu-dinding">20. Bahan Bangunan Utama Dinding</label>
+													<input id="bbu-dinding" type="text" name="bbu-dinding" readonly>
+												</div>
+											</div>
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="bahan-lantai-rt">21. Bahan Bangunan Utama Lantai Rumah Terluas</label>
+													<input id="bahan-lantai-rt" type="text" name="bahan-lantai-rt" readonly>
+												</div>
+											</div>
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="tempat-bab">22. Penggunanaan Fasilitas Tempat Buang Air Besar</label>
+													<input id="tempat-bab" type="text" name="tempat-bab" readonly>
+												</div>
+											</div>
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="rt-mobil">23. Apakah Rumah Tangga Memiliki Mobil?</label>
+													<input id="rt-mobil" type="text" name="rt-mobil" readonly value="1. Ya">
+												</div>
+											</div>
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="rt-ac">24. Apakah Rumah Tangga Memiliki AC</label>
+													<input id="rt-ac" type="text" name="rt-ac" readonly>
+												</div>
+											</div>
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="rt-gas">25. Apakah Rumah Tangga Memiliki Tabung Gas lebih dari 5.5 Kg?</label>
+													<input id="rt-gas" type="text" name="rt-gas" readonly>
+												</div>
+											</div>
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="pendidikan-terakhir">26. Pendidikan Tertinggi Anggota Rumah Tangga Yang Sudah Tidak Bersekolah?</label>
+													<input id="pendidikan-terakhir" type="text" name="pendidikan-terakhir" readonly>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer id="globalfooter" class="globalfooter">
+		<div class="gf-content uk-clearfix">
+			<div class="gf-item uk-float-left">
+				<p>2017 Bappeda Kabupaten Soppeng. <span">Developer</span></p>
+			</div>
+			<div class="gf-item uk-float-right">
+				<a href="" class="uk-button" data-uk-smooth-scroll>Kembali Ke Atas <i class="uk-icon-angle-up"></i></a>
+			</div>
+		</div>
+	</footer>
+	<!-- <script src="assets/js/scripts.js"></script> -->
+</body>
+</html>
