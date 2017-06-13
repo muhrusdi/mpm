@@ -1292,6 +1292,15 @@ body {
     									}
 
     								}
+									@media (max-width: 768px) {
+										.account {
+											img {
+												width: 90px;
+												padding-top: 10px;
+											}
+
+										}
+									}
     								.account-text {
     									padding: 45px 30px 0 30px;
     									margin-left: 120px;
@@ -1312,6 +1321,9 @@ body {
 	    										float: none;
 	    									}
 	    								}
+										@media (max-width: 768px) {
+											padding: 30px 0 0 0;
+										}
     								}
     							}
     							.data {

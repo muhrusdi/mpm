@@ -929,6 +929,10 @@ table.uk-table {
             margin-bottom: 20px; }
             .main .m-content .mc-form .mc-form-wrapper .mc-form-inner .mcf-profile .mcf-list .mcf-item.account-item .account img {
               width: 120px; }
+            @media (max-width: 768px) {
+              .main .m-content .mc-form .mc-form-wrapper .mc-form-inner .mcf-profile .mcf-list .mcf-item.account-item .account img {
+                width: 90px;
+                padding-top: 10px; } }
             .main .m-content .mc-form .mc-form-wrapper .mc-form-inner .mcf-profile .mcf-list .mcf-item.account-item .account-text {
               padding: 45px 30px 0 30px;
               margin-left: 120px; }
@@ -943,6 +947,9 @@ table.uk-table {
                     float: none; }
                   .main .m-content .mc-form .mc-form-wrapper .mc-form-inner .mcf-profile .mcf-list .mcf-item.account-item .account-text .email {
                     float: none; } }
+              @media (max-width: 768px) {
+                .main .m-content .mc-form .mc-form-wrapper .mc-form-inner .mcf-profile .mcf-list .mcf-item.account-item .account-text {
+                  padding: 30px 0 0 0; } }
           .main .m-content .mc-form .mc-form-wrapper .mc-form-inner .mcf-profile .mcf-list .mcf-item .data .data-inner input {
             border: none !important;
             padding: 0 !important;

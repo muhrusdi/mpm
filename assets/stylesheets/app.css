@@ -14674,6 +14674,28 @@ button.button-add:hover {
   background: #1da45d;
 }
 
+button.button-save {
+  padding: 10px 50px 10px 20px;
+}
+
+button.button-save:after {
+  background: #ffb812;
+  content: '\f0c7';
+  top: 0;
+  bottom: 0;
+  padding-top: 7px;
+  font-size: 20px;
+  width: 30px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  position: absolute;
+  right: 0;
+  z-index: 10;
+}
+
+button.button-save:hover {
+  background: #cf9100;
+}
+
 input {
   display: block;
   font-size: 14px;
@@ -14996,12 +15018,28 @@ table.uk-table tbody tr td .uk-button-group div button {
 
 #globalnav .gn-account .gn-account-list > li > .link .uk-dropdown {
   padding: 0;
+  background: #fff;
+  -webkit-box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.5);
+}
+
+#globalnav .gn-account .gn-account-list > li > .link .uk-dropdown:after {
+  position: absolute;
+  content: '';
+  width: 0px;
+  top: -9px;
+  right: 16px;
+  height: 0px;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 9px solid #fff;
 }
 
 #globalnav .gn-account .gn-account-list > li > .link .uk-dropdown ul {
   padding: 0;
   position: relative;
   margin: 0;
+  overflow: hidden;
 }
 
 #globalnav .gn-account .gn-account-list > li > .link .uk-dropdown ul li {
@@ -15010,10 +15048,18 @@ table.uk-table tbody tr td .uk-button-group div button {
 }
 
 #globalnav .gn-account .gn-account-list > li > .link .uk-dropdown ul li a {
-  background: #333;
-  padding: 10px 13px;
-  color: #fff;
+  padding: 10px 25px;
+  color: #444;
+  text-decoration: none;
   display: block;
+}
+
+#globalnav .gn-account .gn-account-list > li > .link .uk-dropdown ul li a i {
+  padding-right: 10px;
+}
+
+#globalnav .gn-account .gn-account-list > li > .link .uk-dropdown ul li a:hover {
+  background: #f2f2f2;
 }
 
 .globalnav-placeholder {
@@ -15982,6 +16028,80 @@ table.uk-table tbody tr td .uk-button-group div button {
 
 .main .m-content .mc-form .mc-form-wrapper .mc-form-inner .mcf-content .main-table .mt-wrapper .mt-inner .pagination ul li:first-child a {
   border-left: none;
+}
+
+.main .m-content .mc-form .mc-form-wrapper .mc-form-inner .mcf-profile .mcf-list {
+  padding: 0;
+}
+
+.main .m-content .mc-form .mc-form-wrapper .mc-form-inner .mcf-profile .mcf-list .mcf-item {
+  padding: 30px 50px;
+}
+
+.main .m-content .mc-form .mc-form-wrapper .mc-form-inner .mcf-profile .mcf-list .mcf-item.account-item {
+  border-bottom: 1px solid #ffb812;
+  margin-bottom: 20px;
+}
+
+.main .m-content .mc-form .mc-form-wrapper .mc-form-inner .mcf-profile .mcf-list .mcf-item.account-item .account img {
+  width: 120px;
+}
+
+@media (max-width: 768px) {
+  .main .m-content .mc-form .mc-form-wrapper .mc-form-inner .mcf-profile .mcf-list .mcf-item.account-item .account img {
+    width: 90px;
+    padding-top: 10px;
+  }
+}
+
+.main .m-content .mc-form .mc-form-wrapper .mc-form-inner .mcf-profile .mcf-list .mcf-item.account-item .account-text {
+  padding: 45px 30px 0 30px;
+  margin-left: 120px;
+}
+
+.main .m-content .mc-form .mc-form-wrapper .mc-form-inner .mcf-profile .mcf-list .mcf-item.account-item .account-text .name p {
+  font-size: 20px;
+}
+
+.main .m-content .mc-form .mc-form-wrapper .mc-form-inner .mcf-profile .mcf-list .mcf-item.account-item .account-text .email {
+  color: #ffb812;
+}
+
+@media (max-width: 959px) {
+  .main .m-content .mc-form .mc-form-wrapper .mc-form-inner .mcf-profile .mcf-list .mcf-item.account-item .account-text {
+    padding: 35px 30px 0 30px;
+  }
+
+  .main .m-content .mc-form .mc-form-wrapper .mc-form-inner .mcf-profile .mcf-list .mcf-item.account-item .account-text .name {
+    float: none;
+  }
+
+  .main .m-content .mc-form .mc-form-wrapper .mc-form-inner .mcf-profile .mcf-list .mcf-item.account-item .account-text .email {
+    float: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .main .m-content .mc-form .mc-form-wrapper .mc-form-inner .mcf-profile .mcf-list .mcf-item.account-item .account-text {
+    padding: 30px 0 0 0;
+  }
+}
+
+.main .m-content .mc-form .mc-form-wrapper .mc-form-inner .mcf-profile .mcf-list .mcf-item .data .data-inner input {
+  border: none !important;
+  padding: 0 !important;
+  font-weight: bold;
+  border-radius: 0 !important;
+  border-bottom: 2px solid #ffb812 !important;
+}
+
+.main .m-content .mc-form .mc-form-wrapper .mc-form-inner .mcf-profile.sunting .mcf-list .mcf-item.account-item .account-text {
+  margin-left: 0;
+  padding: 20px 30px 0 30px;
+}
+
+.main .m-content .mc-form .mc-form-wrapper .mc-form-inner .mcf-profile.sunting .mcf-list .mcf-item .data .data-inner i {
+  color: #ffb812;
 }
 
 .main .m-content .mc-form.mc-form-detail #page-3 .data-wrapper > .data-inner > div > div > .data-inner > label {
