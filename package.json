@@ -25,5 +25,8 @@
     "gulp-sourcemaps": "*",
     "gulp-uglify": "*",
     "run-sequence": "*"
+  },
+  "dependencies": {
+    "tilt.js": "^1.1.21"
   }
 }

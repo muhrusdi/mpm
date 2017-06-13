@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pendaftaran PPFM</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- inject:css -->
+	<link rel="stylesheet" href="assets/stylesheets/base.css">
+	<link rel="stylesheet" href="assets/stylesheets/fonts.css">
+	<link rel="stylesheet" href="assets/stylesheets/main.css">
+	<link rel="stylesheet" href="assets/stylesheets/jquery-ui.min.css">
+	<link rel="stylesheet" href="assets/stylesheets/MonthPicker.css">
+	<!-- endinject -->
+	<!-- inject:js -->
+	<script src="assets/scripts/jquery.min.js"></script>
+	<script src="assets/scripts/uikit.min.js"></script>
+	<script src="assets/scripts/form-select.min.js"></script>
+	<script src="assets/scripts/jquery-ui.min.js"></script>
+	<script src="assets/scripts/MonthPicker.min.js"></script>
+	<script src="assets/scripts/formcache.min.js"></script>
+	<script src="assets/scripts/circle-progress.min.js"></script>
+	<script src="assets/scripts/notify.min.js"></script>
+	<script src="assets/scripts/datepicker.min.js"></script>
+	<script src="assets/scripts/sticky.min.js"></script>
+	<script src="assets/scripts/main.js"></script>
+	<!-- endinject -->
+</head>
+<body>
+	<nav id="globalnav" class="globalnav uk-navbar">
+		<ul class="gn-logo">
+			<li class="gn-hidden"><a href="#">sipakatau</a></li>
+			<li><button id="toggle-side"><i class="uk-icon-navicon uk-icon-small"></i></button></li>
+		</ul>
+		<div class="uk-navbar-flip gn-account">
+			<ul class="gn-account-list">
+				<li>
+					<div class="link" data-uk-dropdown="{mode:'click'}">
+						<ul>
+							<li><div class="image"><img src="assets/images/user_icon.png" alt=""></div></li>
+							<li class="uk-hidden-medium uk-hidden-small"><span>Muhammad Rusdi</span></li>
+							<li><span><i class="uk-icon-angle-down"></i></span></li>
+						</ul>
+						<div class="uk-dropdown uk-dropdown-bottom">
+							<ul>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="globalnav-placeholder"></div>
+	<div class="main">
+		<div class="m-sidebar">
+			<div>
+				<div class="ms-account uk-text-center">
+					<div class="msa-image">
+						<div class="msa-image-inner">
+							<img src="assets/images/user_icon.png" alt="">
+						</div>
+					</div>
+					<div class="msa-text">
+						<div class="msa-text-wrapper">
+							<div class="msa-text-inner">
+								<h2>Muhammad Rusdi</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+				<nav class="ms-nav">
+					<ul class="msn-list uk-nav uk-nav-side uk-nav-parent-icon" data-uk-nav="{multiple:true}">
+						<li class="msn-item uk-parent">
+							<a href="#" class="msn-link"><i class="uk-icon-home"></i>Dashboard</a>
+							<ul class="uk-nav-sub">
+								<li><a href="index.html"><i class="uk-icon-circle-o"></i>Peta Wilayah PPFM</a></li>
+								<li><a href="#"><i class="uk-icon-circle-o"></i>Laporan Peserta PPFM</a></li>
+							</ul>
+						</li>
+						<li class="msn-item uk-parent">
+							<a href="#" class="msn-link"><i class="uk-icon-edit"></i>Menu MPM</a>
+							<ul class="uk-nav-sub">
+								<li><a href="register-mpm.html"><i class="uk-icon-circle-o"></i>Pendaftaran MPM</a></li>
+								<li><a href="#"><i class="uk-icon-circle-o"></i>Daftar Pesrta MPM</a></li>
+							</ul>
+
+						</li>
+						<li class="msn-item uk-parent uk-active">
+							<a href="#" class="msn-link"><i class="uk-icon-file-text"></i>Menu PPFM</a>
+							<ul class="uk-nav-sub">
+								<li  class="uk-active"><a href="register-ppfm.html"><i class="uk-icon-circle-o"></i>Pendaftaran PPFM</a></li>
+								<li><a href="#"><i class="uk-icon-circle-o"></i>Perubahan Data PPFM</a></li>
+								<li><a href="peserta-ppfm.html"><i class="uk-icon-circle-o"></i>Daftar Peserta PPFM</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div id="pendaftaran-mpm-content" class="m-content">
+			<div class="mc-header">
+				<style>
+					#pendaftaran-mpm-content > .mc-header {
+						background: url('assets/images/pmpm.jpg') no-repeat center center;
+    					background-size: cover;
+					}
+				</style>
+				<div class="mch-text">
+					<h2>Pendaftaran PPFM</h2>
+				</div>
+			</div>
+			<div class="mc-breadcrumb" data-uk-sticky="{top:60}">
+				<ul class="uk-breadcrumb">
+					<li><a href="#">Menu MPM</a></li>
+					<li><a href="#">Pendaftaran PPFM</a></li>
+					<li><a href="#">Sunting</a></li>
+					<li><a href="#">Halaman <span id="count-page"></span></a></li>
+				</ul>
+			</div>
+			<div class="mc-form">
+				<div class="mc-form-wrapper">
+					<div class="mc-form-inner">
+						<div id="pendaftaran-ppfm" class="mcf-sunting-page">
+							<div class="mcf-content">
+								<div class="mcf-title">
+									<h3>Sunting Data Peserta Pendaftaran Terpadu Program Penanganan Fakir Miskin</h3>
+								</div>
+								
+								<fieldset id="page-1">
+									<ul class="mcf-list">										
+										<li class="mcf-item">
+											<div class="title">
+												<h4>I. Sunting Pengenalan Tempat</h4>
+											</div>
+											<div class="data uk-grid">
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="prov-iv">1. Provinsi</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="prov-iv" name="prov-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="1">Laki-Laki</option>
+						                                        <option value="2">Perempuan</option>
+						                                    </select>
+														</div> 
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="kab-iv">2. Kabupaten / Kota</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="kab-iv" name="kab-iv">
+						                                    	<option value="0">Pilih...</option>
+						                                        <option value="1">Laki-Laki</option>
+						                                        <option value="2">Perempuan</option>
+						                                    </select>
+														</div> 
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="kec-iv">3. Kecamatan</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="kec-iv" name="kec-iv">
+						                                    	<option value="0">Pilih...</option>
+						                                        <option value="1">Laki-Laki</option>
+						                                        <option value="2">Perempuan</option>
+						                                    </select>
+														</div> 
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="kab-iv">2. Kabupaten / Kota</label>
+														</div>
+														<div class="input-group">
+						                                    <i class="uk-icon-pencil-square-o uk-icon-small"></i>
+						                                    <input id="kab-iv" type="text" name="kab-iv">
+														</div> 
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="sls-iv">5. Nama SLS</label>
+														</div>
+														<div class="input-group">
+						                                    <i class="uk-icon-pencil-square-o uk-icon-small"></i>
+						                                    <input id="sls-iv" type="text" name="sls-iv">
+														</div> 
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="alamat-iv">6. Alamat</label>
+														</div>
+														<div class="input-group">
+						                                    <i class="uk-icon-pencil-square-o uk-icon-small"></i>
+						                                    <input id="alamat-iv" type="text" name="alamat-iv">
+														</div> 
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="no-uru-rt-iv">7. Nomor Urut Rumah Tangga (Dari PBDT 2015. FKP Kolom (1))</label>
+														</div>
+														<div class="input-group">
+						                                    <i class="uk-icon-pencil-square-o uk-icon-small"></i>
+						                                    <input id="no-uru-rt-iv" type="text" name="no-uru-rt-iv">
+														</div> 
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="nama-krt-iv">8. nama KRT</label>
+														</div>
+														<div class="input-group">
+						                                    <i class="uk-icon-pencil-square-o uk-icon-small"></i>
+						                                    <input id="nama-krt-iv" type="text" name="nama-krt-iv">
+														</div> 
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="jum-krt-iv">9. Jumlah ART</label>
+														</div>
+														<div class="input-group">
+						                                    <i class="uk-icon-pencil-square-o uk-icon-small"></i>
+						                                    <input id="jum-krt-iv" type="text" name="jum-krt-iv">
+														</div> 
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="jum-kel-iv">7. Jumlah Keluarga</label>
+														</div>
+														<div class="input-group">
+						                                    <i class="uk-icon-pencil-square-o uk-icon-small"></i>
+						                                    <input id="jum-kel-iv" type="text" name="jum-kel-iv">
+														</div> 
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="title">
+												<h4>II. Keterang Petugas & Responden</h4>
+											</div>
+											<div class="data uk-grid">
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="tgl-pencacahan-iv">1. Tanggal Pencacah</label>
+														</div>
+														<div class="input-group">
+						                                    <i class="uk-icon-calendar uk-icon-small"></i>
+						                                    <input id="tgl-pencacahan-iv" class="ttl" type="text" name="tgl-pencacahan-iv" data-uk-datepicker="{format:'DD-MM-YYYY', i18n: {months: ['Januari', 'Februari', 'Maret', 'April', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'], weekdays: ['Ahad', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu']}}">
+														</div> 
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="nama-pencacah-iv">2. Nama Pencacah</label>
+														</div>
+														<div class="input-group">
+						                                    <i class="uk-icon-pencil-square-o uk-icon-small"></i>
+						                                    <input id="nama-pencacah-iv" type="text" name="nama-pencacah-iv">
+														</div> 
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="tgl-pemeriksaan-iv">1.Tanggal Pemeriksa</label>
+														</div>
+														<div class="input-group">
+						                                    <i class="uk-icon-calendar uk-icon-small"></i>
+						                                    <input id="tgl-pemeriksaan-iv" class="ttl" type="text" name="tgl-pemeriksaan-iv" data-uk-datepicker="{format:'DD-MM-YYYY', i18n: {months: ['Januari', 'Februari', 'Maret', 'April', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'], weekdays: ['Ahad', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu']}}">
+														</div> 
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="nama-pemeriksa-iv">4. Nama Pemeriksa</label>
+														</div>
+														<div class="input-group">
+						                                    <i class="uk-icon-pencil-square-o uk-icon-small"></i>
+						                                    <input id="nama-pemeriksa-iv" type="text" name="nama-pemeriksa-iv">
+														</div> 
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">5. Hasil Pencacah Rumah Tangga:</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="kec-iv" name="kec-iv">
+						                                    	<option value="0">Pilih...</option>
+						                                        <option value="1. Selesai dicacah">1. Selesai dicacah</option>
+						                                        <option value="2" selected>2. Rumah tangga tidak ditemukan</option>
+						                                        <option value="3">3. Rumah tangga pindah / bangunan sensus sudah tidak ada</option>
+						                                        <option value="4">4. Bagian dari rumah tangga di dokumen PBDT2015.FKP</option>
+						                                    </select>
+														</div> 
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="title">
+												<h4>III. Keterangan Perumahan</h4>
+											</div>
+											<div class="data uk-grid">
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">1. a. Status Penguasaan Bangunan Tempat Tinggal yang Ditempati</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="kec-iv" name="kec-iv">
+						                                    	<option value="0">Pilih...</option>
+						                                        <option value="1">1. Mikik Sendiri</option>
+						                                        <option value="2" selected>2. Kontrak / Sewa</option>
+						                                        <option value="3">3. Bebas / Sewa</option>
+						                                        <option value="4">4. Dinas</option>
+						                                        <option value="5">5.Lainnya</option>
+						                                    </select>
+														</div> 
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">1. b. Status Lahan tempat Tinggal Yang Ditempati</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="kec-iv" name="kec-iv">
+						                                    	<option value="0">Pilih...</option>
+						                                        <option value="1">1. Mikik Sendiri</option>
+						                                        <option value="2" selected>2. Kontrak / Sewa</option>
+						                                        <option value="3">3. Bebas / Sewa</option>
+						                                        <option value="5">5.Lainnya</option>
+						                                    </select>
+														</div> 
+														<!-- <div class="error">Pesan Error</div> -->
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="iii-luas-lantai-iv">2. Luas Lantai</label>
+														</div>
+														<div class="input-group">
+						                                    <i class="uk-icon-pencil-square-o uk-icon-small"></i>
+						                                    <input id="iii-luas-lantai-iv" type="text" name="iii-luas-lantai-iv">
+														</div> 
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">3. Jenis Lantai Terluas</label>
+														</div>
+														<div class="input-group">
+						                                    <i class="uk-icon-pencil-square-o uk-icon-small"></i>
+						                                    <input id="jenis-lantai-luas" type="text" name="jenis-lantai-luas">
+														</div> 
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-3 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">4a. Jenis Dinding Terluas</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="kec-iv" name="kec-iv">
+						                                    	<option value="0">Pilih...</option>
+						                                        <option value="1" selected>1. Tembok: Jelek / kualitas rendah</option>
+						                                        <option value="2">2. Kontrak / Sewa</option>
+						                                        <option value="3">3. Bebas / Sewa</option>
+						                                        <option value="5">5.Lainnya</option>
+						                                    </select>
+														</div>
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-2-3 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="jenis-atap-terluas">5a. Jenis Atap Terluas</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="jenis-atap-terluas" name="jenis-atap-terluas">
+						                                    	<option value="0">Pilih...</option>
+						                                        <option value="1" selected>1. Tembok: Jelek / kualitas rendah</option>
+						                                        <option value="2">2. Kontrak / Sewa</option>
+						                                        <option value="3">3. Bebas / Sewa</option>
+						                                        <option value="5">5.Lainnya</option>
+						                                    </select>
+														</div>
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="jumlah-kamar-tidur-iv">6. Jumlah Kamar Tidur</label>
+														</div>
+														<div class="input-group">
+						                                    <i class="uk-icon-pencil-square-o uk-icon-small"></i>
+						                                    <input id="jumlah-kamar-tidur-iv" type="text" name="jumlah-kamar-tidur-iv">
+														</div> 
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">7. Sumber Air Minum</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="jenis-atap-terluas" name="jenis-atap-terluas">
+						                                    	<option value="0">Pilih...</option>
+						                                        <option value="1" selected>6. Sumur Terlindung</option>
+						                                        <option value="2">2. Kontrak / Sewa</option>
+						                                        <option value="3">3. Bebas / Sewa</option>
+						                                        <option value="5">5.Lainnya</option>
+						                                    </select>
+														</div>
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">8. Cara Memperoleh Air Minum</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="jenis-atap-terluas" name="jenis-atap-terluas">
+						                                    	<option value="0">Pilih...</option>
+						                                        <option value="1" selected>2. Langganan</option>
+						                                        <option value="2">2. Kontrak / Sewa</option>
+						                                        <option value="3">3. Bebas / Sewa</option>
+						                                        <option value="5">5.Lainnya</option>
+						                                    </select>
+														</div>
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">9a. Sumber Penerangan Utama</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="sumber-penerangan" name="sumber-penerangan">
+						                                    	<option value="0">Pilih...</option>
+						                                        <option value="1" selected>1. Listrik PLN: 450</option>
+						                                        <option value="2">2. Kontrak / Sewa</option>
+						                                        <option value="3">3. Bebas / Sewa</option>
+						                                        <option value="5">5.Lainnya</option>
+						                                    </select>
+														</div>
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-3 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="bahan-bakar-masak">10. Bahan bakar / energi untuk memasak:</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="bahan-bakar-masak" name="bahan-bakar-masak">
+						                                    	<option value="0">Pilih...</option>
+						                                        <option value="1" selected>7. Arang</option>
+						                                        <option value="2">2. Kontrak / Sewa</option>
+						                                        <option value="3">3. Bebas / Sewa</option>
+						                                        <option value="5">5.Lainnya</option>
+						                                    </select>
+														</div>
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-2-3 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="fasilitas-bab">11. Penggunaan fasilitas tempat buang air besar: </label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="fasilitas-bab" name="fasilitas-bab">
+						                                    	<option value="0">Pilih...</option>
+						                                        <option value="1" selected>1. Sendiri: Leher Angsa</option>
+						                                        <option value="2">2. Kontrak / Sewa</option>
+						                                        <option value="3">3. Bebas / Sewa</option>
+						                                        <option value="5">5.Lainnya</option>
+						                                    </select>
+														</div>
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="pembuangan-tinja">11. Tempat pembuangan akhir tinja:</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="pembuangan-tinja" name="pembuangan-tinja">
+						                                    	<option value="0">Pilih...</option>
+						                                        <option value="1" selected>1. Tangki</option>
+						                                        <option value="2">2. Kontrak / Sewa</option>
+						                                        <option value="3">3. Bebas / Sewa</option>
+						                                        <option value="5">5.Lainnya</option>
+						                                    </select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="submit">
+												<div class="uk-clearfix">
+													
+													<div class="uk-float-right">
+														<button type="button" class="f-next">Selanjutnya</button>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</fieldset>
+								
+								
+								<fieldset id="page-2" >
+									<ul class="mcf-list">
+										<li class="mcf-item">
+											<div class="title">
+												<h4>IV. Keterangan Sosial Ekonomi Anggota Rumah Tangga</h4>
+											</div>
+											<div class="desc">
+												<p><i>Tulis siapa saja yang biasanya tinggal dan makan di rumah tangga BAIK, DEWASA, ANAK-ANAK, MAUPUN BAYI. Tuliskan nama sesuai dengan identitas, beserta Nomor Induk Kependudukan.</i></p>
+											</div>
+											<div class="data uk-grid">
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="nama-iv">1. Nama</label>
+														</div>
+														<div class="input-group">
+						                                    <i class="uk-icon-pencil-square-o uk-icon-small"></i>
+						                                    <input id="nama-iv" type="text" name="nama-iv">
+														</div> 
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="nik-iv">2. Nomor Induk Kependudukan (NIK)</label>abel>
+														</div>
+														<div class="input-group">
+						                                    <i class="uk-icon-pencil-square-o uk-icon-small"></i>
+						                                    <input id="nik-iv" type="text" name="nik-iv">
+														</div> 
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">3. Hubungan Dengan Kepala Rumah Tangga ( Isikan KODE )</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span>Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="hub-kep-rt-iv" data-form-iv="hub-kep-rt-iv" name="hub-kep-rt-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="Kepala Rumah Tangga">1. Kepala Rumah Tangga</option>
+						                                        <option value="Suami / Istri" selected>2. Sumai / Istri</option>
+						                                        <option value="Anak">3. Anak</option>
+						                                        <option value="Menantu">4. Menantu</option>
+						                                        <option value="Cucu">5. Cucu</option>
+						                                        <option value="Orang Tua / Mertua">6. Orang Tua / Mertua</option>
+						                                        <option value="Pembantu">7. Pembantu Ruta</option>
+						                                        <option value="Lainnya">8. Lainnya</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="nomor-urut-k-iv">4. Nomor Urut Keluarga</label>
+														</div>
+														<div class="input-group">
+						                                    <i class="uk-icon-pencil-square-o uk-icon-small"></i>
+						                                    <input id="nomor-urut-k-iv" type="text" name="nomor-urut-k-iv">
+														</div> 
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">5. Hubungan Dengan Kepala Keluarga ( Isikan KODE )</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="hub-kep-kel-iv" data-form-iv="hub-kep-kel-iv" name="hub-kep-kel-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="Kepala Rumah Tangga">1. Kepala Rumah Tangga</option>
+						                                        <option value="Suami / Istri">2. Sumai / Istri</option>
+						                                        <option value="Anak">3. Anak</option>
+						                                        <option value="Menantu" selected>4. Menantu</option>
+						                                        <option value="Cucu">5. Cucu</option>
+						                                        <option value="Orang Tua / Mertua">6. Orang Tua / Mertua</option>
+						                                        <option value="Pembantu">7. Pembantu Ruta</option>
+						                                        <option value="Lainnya">8. Lainnya</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">6. Jenis Kelamin</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="jenis-kelamin-iv" data-form-iv="jenis-kelamin-iv" name="jenis-kelamin-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="Laki-Laki" selected>1. Laki-Laki</option>
+						                                        <option value="Perempuan">2. Perempuan</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="umur-iv">7. Umur</label>
+														</div>
+														<div class="input-group">
+						                                    <i class="uk-icon-pencil-square-o uk-icon-small"></i>
+						                                    <input id="umur-iv" type="text" name="umur-iv">
+														</div> 
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">8. Status Perkawinan</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="status-kawin-iv" data-form-iv="status-kawin-iv" name="status-kawin-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="Belum Kawin">1. Belum Kawin</option>
+						                                        <option value="Kawin / Nikah" selected>2. Kawin / Nikah</option>
+						                                        <option value="Cerai Hidup">3. Cerai Hidup</option>
+						                                        <option value="Cerai Mati">4. Cerai Mati</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">9. Kepemilikan Akta / Buku Nikah atau Akta Cerai (Isi jika status perkawinan berkode (2) atau (3))</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="kepemilikan-akta-iv" data-form-iv="kepemilikan-akta-iv" name="kepemilikan-akta-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="Tidak" selected>0. Tidak</option>
+						                                        <option value="Ya, data ditunjukkan.">1. Ya, data ditunjukkan.</option>
+						                                        <option value="Ya, tidak dapat ditunjukkan">2. Ya, tidak dapat ditunjukkan</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">10. Tercantum Dalam Kartu Keluarga (KK) di Rumah Tangga ini</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="tercantum-dalam-kk-iv" data-form-iv="tercantum-dalam-kk-iv" name="tercantum-dalam-kk-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="1" selected>Opsi</option>
+						                                        <option value="2">Opsi</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">11. Kepemilikan Kartu Identitas</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="kepemilikan-id-iv" data-form-iv="kepemilikan-id-iv" name="kepemilikan-id-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="1" selected>Opsi</option>
+						                                        <option value="2">Opsi</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">12. Status Kehamilan</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="status-hamil-iv" data-form-iv="status-hamil-iv" name="status-hamil-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="1" selected>Opsi</option>
+						                                        <option value="2">Opsi</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">13. Jenis Cacat (Isikan KODE)</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="jenis-cacat-iv" data-form-iv="jenis-cacat-iv" name="jenis-cacat-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="00">00. Tidak Cacat</option>
+						                                        <option value="01">01. Tuna Daksa / Cacat Tubuh</option>
+						                                        <option value="02">02. Tuna Netra / Buta</option>
+						                                        <option value="03" selected>03. Tuna Rungu</option>
+						                                        <option value="04">04. Tuna Wicara</option>
+						                                        <option value="05">05. Tunga Rungu & Wicara</option>
+						                                        <option value="06">06. Tuna Netra & Cacat Tubuh</option>
+						                                        <option value="07">07. Tuna Rungu, Rungu & Wicara</option>
+						                                        <option value="08">08. Tuna Rungu, Wicara, Netra & Cacat Tubuh</option>
+						                                        <option value="09">09. Tuna Rungu, Wicara, Netra & Cacat Tubuh</option>
+						                                        <option value="10">10. Cacat Mental Retardasi</option>
+						                                        <option value="11">11. Mantan Penderita Gangguan Jiwa</option>
+						                                        <option value="12">12. Cacat Fisik & Mental</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">14. Penyakit Kronis / Menahun</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="penyakit-kronis-iv" data-form-iv="penyakit-kronis-iv" name="penyakit-kronis-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="00">Tidak Adak</option>
+						                                        <option value="01">Hipertensi (Tekanan Darah Tinggi)</option>
+						                                        <option value="02">Rematik</option>
+						                                        <option value="03" selected>Asma</option>
+						                                        <option value="04">Masalah Jantung</option>
+						                                        <option value="05">Diabetes (Kencing Manis)</option>
+						                                        <option value="06">Tuberculosis (TBC)</option>
+						                                        <option value="07">Stroke</option>
+						                                        <option value="08">Kanker atau Tumor Ganas</option>
+						                                        <option value="09">Lainnya (gagal ginjal, paru-paru flek dan sejenisnya)</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="title">
+												<h4>Untuk Anggota Rumah Tangga 5 Tahun ke Atas</h4>
+											</div>
+											<div class="data uk-grid">
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">15. Partisipasi Sekolah</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="partisipasi-sekolah-iv" data-form-iv="partisipasi-sekolah-iv" name="hub-kep-rt-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="1" selected>Masih Sekolah</option>
+						                                        <option value="2">Tidak Bersekolah Lagi</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">16. Jenjang & Jenis Pendidikan Tertinggi Yang Pernah / Sedang Diduduki</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="jenjang-pendidikan-iv" data-form-iv="jenjang-pendidikan-iv" name="jenjang-pendidikan-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="1">SD / SDLB</option>
+						                                        <option value="2">Paket A</option>
+						                                        <option value="3">M. Ibtidaiyah</option>
+						                                        <option value="4" selected>SMP / SMPLB</option>
+						                                        <option value="5">Paket B</option>
+						                                        <option value="6">M. Tsanawiyah</option>
+						                                        <option value="7">SMA / SMK / SMALB</option>
+						                                        <option value="8">Paket C</option>
+						                                        <option value="9">M. Aliyah</option>
+						                                        <option value="10">Perguruan Tinggi</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">17. Kelas Tertinggi yang Pernah / Sedang Diduki</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="kelas-tertinggi-iv" data-form-iv="kelas-tertinggi-iv" name="kelas-tertinggi-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="1">1</option>
+						                                        <option value="2">2</option>
+						                                        <option value="3">3</option>
+						                                        <option value="4" selected>4</option>
+						                                        <option value="5">5</option>
+						                                        <option value="6">6</option>
+						                                        <option value="7">7</option>
+						                                        <option value="8">8 (Tamat)</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">18. Ijazah Tertinggi yang Dimiliki</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="ijazah-tertinggi-iv" data-form-iv="ijazah-tertinggi-iv" name="hub-kep-rt-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="1">Tidak Punya Ijazah</option>
+						                                        <option value="2">SD / Sederajat</option>
+						                                        <option value="3" selected>SMP / Sederajat</option>
+						                                        <option value="4">SMA / Sederajat</option>
+						                                        <option value="5">D4 / S1</option>
+						                                        <option value="6">S2 / S3</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">19. Bekerja / Membantu Bekerja Selama Seminggu Yang Lalu</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="bantu-kerja-iv" data-form-iv="bantu-kerja-iv" name="bantu-kerja-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="1" selected>Opsi</option>
+						                                        <option value="2">Opsi</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">20. Lapangan Usaha Dari Pekerjaan Utama</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="usaha-utama-iv" data-form-iv="usaha-utama-iv" name="usaha-utama-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="1">Pertanian Tanaman Padi & Palawiha</option>
+						                                        <option value="2">Hortikultural</option>
+						                                        <option value="3">Perkebunan</option>
+						                                        <option value="4">Perikanan Tangkap</option>
+						                                        <option value="5" selected>Perikanan Budayah</option>
+						                                        <option value="6">Peternakan</option>
+						                                        <option value="7">Kehutanan / Pertanian Lainnya</option>
+						                                        <option value="8">Pertambangan / Penggalian</option>
+						                                        <option value="9">Industri Pengolahan</option>
+						                                        <option value="10">Listrik & Gas</option>
+						                                        <option value="11">Bangunan / Konstruksi</option>
+						                                        <option value="12">Perdagangan</option>
+						                                        <option value="13">Hotel & Rumah Makan</option>
+						                                        <option value="14">Transportasi & Pergudangan</option>
+						                                        <option value="15">Informasi & Komunikasi</option>
+						                                        <option value="16">Keuangan & Asuransi</option>
+						                                        <option value="17">Jasa Pendidikan</option>
+						                                        <option value="18">Jasa Kesehatan</option>
+						                                        <option value="19">Jasa Kemasyarakatan, Pemerintah & Perorangan</option>
+						                                        <option value="20">Pemulung</option>
+						                                        <option value="21">Lainnya</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="">21. Status Kedudukan Dalam Pekerjaan Utama</label>
+														</div>
+														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+															<span class="">Pilih...</span>
+						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+						                                    <select id="kedudukan-kerja-iv" data-form-iv="kedudukan-kerja-iv" name="kedudukan-kerja-iv">
+						                                        <option value="0">Pilih...</option>
+						                                        <option value="1">Berusaha Sendiri</option>
+						                                        <option value="2">Berusaha Dibantu Buruh Tidak Tetap / Tidak Dibayar</option>
+						                                        <option value="3">Berusaha Dibantu Buruh Tetap / Dibayar</option>
+						                                        <option value="4" selected>Buruh / Karyawan / Pegawai Swasta</option>
+						                                        <option value="5">PNS / TNI / Polri / BUMN / BUMD / anggota lgislatif</option>
+						                                        <option value="6">Pekerjaan Bebas Pertanian</option>
+						                                        <option value="7">Pekerja Bebas Non-Pertanian</option>
+						                                        <option value="8">Pekerja Keluarga / Tidak Dibayar</option>
+						                                    </select>
+														</div> 
+														
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="desc-2">
+												<p><i>Apakah Ada Anak Dari Kepala Keluarga Yang Masih Menjadi Tanggungan Tetapi Sedang Sekolah / Kuliah & Tidak Tinggal Dalam Ruta Ini? Jika ada, sebutkan</i></p>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="data uk-grid">
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="nama-t-iv">1. Nama</label>
+														</div>
+														<div class="input-group">
+						                                    <i class="uk-icon-pencil-square-o uk-icon-small"></i>
+						                                    <input id="nama-t-iv" type="text" name="nama-t-iv">
+														</div> 
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="alamat-t-iv">2. Alamat Tempat Tinggal</label>
+														</div>
+														<div class="input-group">
+						                                    <i class="uk-icon-pencil-square-o uk-icon-small"></i>
+						                                    <input id="alamat-t-iv" type="text" name="alamat-t-iv">
+														</div> 
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="nik-t-iv">3. Nomor Induk Kependudukan (NIK)</label>
+														</div>
+														<div class="input-group">
+						                                    <i class="uk-icon-pencil-square-o uk-icon-small"></i>
+						                                    <input id="nik-t-iv" type="text" name="nik-t-iv">
+														</div> 
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="nama-sekolah-t-iv">4. Nama Sekolah</label>
+														</div>
+														<div class="input-group">
+						                                    <i class="uk-icon-pencil-square-o uk-icon-small"></i>
+						                                    <input id="nama-sekolah-t-iv" type="text" name="nama-sekolah-t-iv">
+														</div> 
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<div>
+															<label for="nisn-t-iv">5. NISN / NO KTM</label>
+														</div>
+														<div class="input-group">
+						                                    <i class="uk-icon-pencil-square-o uk-icon-small"></i>
+						                                    <input id="nisn-t-iv" type="text" name="nisn-t-iv">
+														</div> 
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="submit">
+												<div class="uk-clearfix">
+													<div class="uk-float-left">
+														<button type="button" class="f-prev">Sebelumnya</button>
+													</div>
+													<div class="uk-float-right">
+														<button type="button" class="f-next">Selanjutnya</button>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</fieldset>
+								<fieldset id="page-3">
+									<ul class="mcf-list">										
+										<li class="mcf-item">
+											<div class="title">
+												<h4>I. Kepemilikan Aset Dan Keikutsertaan Program</h4>
+											</div>
+											<div class="data">
+												<div class="data-wrapper">
+													<div class="data-inner uk-text-left">
+														<label for="">1. Rumah Tangga Memiliki Sendiri Aset Bergerak Sebagai Berikut:</label>
+														<div class="uk-grid">
+															<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="data-inner">
+																	<div>
+																		<label for="tabung-gas-v-g">a. Tabung gas 5.5 kg atau lebih</label>
+																	</div>
+																	<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+																		<span class="">Pilih...</span>
+									                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+									                                    <select id="aset-bergerak" name="aset-bergerak">
+									                                    	<option value="0">Pilih...</option>
+									                                        <option value="1" selected>1. Tembok: Jelek / kualitas rendah</option>
+									                                        <option value="2">2. Kontrak / Sewa</option>
+									                                        <option value="3">3. Bebas / Sewa</option>
+									                                        <option value="5">5.Lainnya</option>
+									                                    </select>
+																	</div>
+																</div>
+															</div>
+															<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="data-inner">
+																	<div>
+																		<label for="lemari-kulkas">b. Lemari es / kulkas</label>
+																	</div>
+																	<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+																		<span class="">Pilih...</span>
+									                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+									                                    <select id="lemari-kulkas" name="lemari-kulkas">
+									                                    	<option value="0">Pilih...</option>
+									                                        <option value="1" selected>1. Ya</option>
+									                                        <option value="2">2. Tidak</option>
+									                                    </select>
+																	</div>
+																</div>
+															</div>
+															
+															<div class="uk-width-large-1-1 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="data-inner uk-text-left">
+																	<label for="">2. Rumah Tangga Memiliki Aset Tidak Bergerak Sebagai Berikut:</label>
+																	<div class="data-inner-inner">
+																		<div class="uk-grid">
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<div>
+																						<label for="lahan-v">a. Lahan</label>
+																					</div>
+																					<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+																						<span class="">Pilih...</span>
+													                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+													                                    <select id="lahan-v" name="lahan-v">
+													                                    	<option value="0">Pilih...</option>
+													                                        <option value="1" selected>1. Ya</option>
+													                                        <option value="2">2. Tidak</option>
+													                                    </select>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<div>
+																						<label for="rumah-tempat-lain">b. Rumah Di Tempat Lain</label>
+																					</div>
+																					<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+																						<span class="">Pilih...</span>
+													                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+													                                    <select id="rumah-tempat-lain" name="rumah-tempat-lain">
+													                                    	<option value="0">Pilih...</option>
+													                                        <option value="1" selected>1. Ya</option>
+													                                        <option value="2">2. Tidak</option>
+													                                    </select>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="data-inner uk-text-left">
+																	<label for="">3. Jumlah Ternak Yang Dimiliki (Ekor):</label>
+																	<div class="data-inner-inner">
+																		<div class="uk-grid">
+																			<div class="uk-width-large-1-1 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<div>
+																						<label for="ternak-sapi-v">a. Sapi</label>
+																					</div>
+																					<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+																						<span class="">Pilih...</span>
+													                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+													                                    <select id="ternak-sapi-v" name="ternak-sapi-v">
+													                                    	<option value="0">Pilih...</option>
+													                                        <option value="1" selected>2 ekor</option>
+													                                        <option value="2">2. Tidak</option>
+													                                    </select>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="data-inner uk-text-left">
+																	<label for="">4. Usaha yang dimiliki sendiri / bersama:</label>
+																	<div class="data-inner-inner">
+																		<div class="uk-grid">
+																			<div class="uk-width-large-1-1 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<div>
+																						<label for="art-usaha-ya-v">a. Ya</label>
+																					</div>
+																					<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+																						<span class="">Pilih...</span>
+													                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+													                                    <select id="art-usaha-ya-v" name="art-usaha-ya-v">
+													                                    	<option value="0">Pilih...</option>
+													                                        <option value="1" selected>2 ekor</option>
+													                                        <option value="2">2. Tidak</option>
+													                                    </select>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="uk-width-large-1-1 uk-width-medium-1-2 uk-width-small-1-1">
+																<div class="data-inner uk-text-left">
+																	<label for="">5. Rumah Tangga Menjadi Peserta Program / Memiliki Kartu Program Berikut:</label>
+																	<div class="data-inner-inner">
+																		<div class="uk-grid">
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<div>
+																						<label for="rt-kks-v">a. Kartu Keluarga Sejatera (KKS) Kartu Perlindungan Sosial (KPS)</label>
+																					</div>
+																					<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+																						<span class="">Pilih...</span>
+													                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+													                                    <select id="rt-kks-v" name="rt-kks-v">
+													                                    	<option value="0">Pilih...</option>
+													                                        <option value="1" selected>2 ekor</option>
+													                                        <option value="2">2. Tidak</option>
+													                                    </select>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<div>
+																						<label for="rt-kip-v">b. Kartu Indonesia Pintar (KIP) / Bantuan Siswa Miskin (BSM)</label>
+																					</div>
+																					<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+																						<span class="">Pilih...</span>
+													                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+													                                    <select id="rt-kip-v" name="rt-kip-v">
+													                                    	<option value="0">Pilih...</option>
+													                                        <option value="1" selected>2 ekor</option>
+													                                        <option value="2">2. Tidak</option>
+													                                    </select>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<div>
+																						<label for="rt-kis-v">c. Kartu Indonesia Sehat (KIS) / BPJS Kesehatan / Jamkesmas</label>
+																					</div>
+																					<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+																						<span class="">Pilih...</span>
+													                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+													                                    <select id="rt-kis-v" name="rt-kis-v">
+													                                    	<option value="0">Pilih...</option>
+													                                        <option value="1" selected>2 ekor</option>
+													                                        <option value="2">2. Tidak</option>
+													                                    </select>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<div>
+																						<label for="rt-bpjs">d. BPJS Kesehatan perserta mandiri</label>
+																					</div>
+																					<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+																						<span class="">Pilih...</span>
+													                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+													                                    <select id="rt-bpjs" name="rt-bpjs">
+													                                    	<option value="0">Pilih...</option>
+													                                        <option value="1" selected>2 ekor</option>
+													                                        <option value="2">2. Tidak</option>
+													                                    </select>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<div>
+																						<label for="rt-jamsostel-v">e. Jaminan sosial tenaga kerja (Jamsostek) / BPJS Ketenagarkerjaan</label>
+																					</div>
+																					<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+																						<span class="">Pilih...</span>
+													                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+													                                    <select id="rt-jamsostel-v" name="rt-jamsostel-v">
+													                                    	<option value="0">Pilih...</option>
+													                                        <option value="1" selected>2 ekor</option>
+													                                        <option value="2">2. Tidak</option>
+													                                    </select>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<div>
+																						<label for="asuransi-kes-v">f. Asuransi Kesehatan Lainnya</label>
+																					</div>
+																					<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+																						<span class="">Pilih...</span>
+													                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+													                                    <select id="asuransi-kes-v" name="asuransi-kes-v">
+													                                    	<option value="0">Pilih...</option>
+													                                        <option value="1" selected>2 ekor</option>
+													                                        <option value="2">2. Tidak</option>
+													                                    </select>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<div>
+																						<label for="rt-phk-v">g. Program Keluarga Harapan (PKH)</label>
+																					</div>
+																					<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+																						<span class="">Pilih...</span>
+													                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+													                                    <select id="rt-phk-v" name="rt-phk-v">
+													                                    	<option value="0">Pilih...</option>
+													                                        <option value="1" selected>2 ekor</option>
+													                                        <option value="2">2. Tidak</option>
+													                                    </select>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<div>
+																						<label for="rt-raskin-v">g. Beras Untuk Orang Miskin (Raskin)</label>
+																					</div>
+																					<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+																						<span class="">Pilih...</span>
+													                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+													                                    <select id="rt-raskin-v" name="rt-raskin-v">
+													                                    	<option value="0">Pilih...</option>
+													                                        <option value="1" selected>2 ekor</option>
+													                                        <option value="2">2. Tidak</option>
+													                                    </select>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+																				<div class="data-inner">
+																					<div>
+																						<label for="rt-kur-v">g. Kredit Usaha Rakyat (KUR)</label>
+																					</div>
+																					<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+																						<span class="">Pilih...</span>
+													                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
+													                                    <select id="rt-kur-v" name="rt-kur-v">
+													                                    	<option value="0">Pilih...</option>
+													                                        <option value="1" selected>2 ekor</option>
+													                                        <option value="2">2. Tidak</option>
+													                                    </select>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="submit">
+												<div class="uk-clearfix">
+													<div class="uk-float-left">
+														<button type="button" class="f-prev">Sebelumnya</button>
+													</div>
+													<div class="uk-float-right">
+														<button type="submit" class="f-submit">Simpan</button>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</fieldset>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer id="globalfooter" class="globalfooter">
+		<div class="gf-content uk-clearfix">
+			<div class="gf-item uk-float-left">
+				<p>2017 Bappeda Kabupaten Soppeng. <span">Developer</span></p>
+			</div>
+			<div class="gf-item uk-float-right">
+				<a href="" class="uk-button" data-uk-smooth-scroll>Kembali Ke Atas <i class="uk-icon-angle-up"></i></a>
+			</div>
+		</div>
+	</footer>
+	<!-- <script src="assets/js/scripts.js"></script> -->
+</body>
+</html>

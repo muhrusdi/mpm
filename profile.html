@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Profil</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- inject:css -->
+	<link rel="stylesheet" href="assets/stylesheets/base.css">
+	<link rel="stylesheet" href="assets/stylesheets/fonts.css">
+	<link rel="stylesheet" href="assets/stylesheets/main.css">
+	<link rel="stylesheet" href="assets/stylesheets/jquery-ui.min.css">
+	<link rel="stylesheet" href="assets/stylesheets/MonthPicker.css">
+	<!-- endinject -->
+	<!-- inject:js -->
+	<script src="assets/scripts/jquery.min.js"></script>
+	<script src="assets/scripts/uikit.min.js"></script>
+	<script src="assets/scripts/form-select.min.js"></script>
+	<script src="assets/scripts/jquery-ui.min.js"></script>
+	<script src="assets/scripts/MonthPicker.min.js"></script>
+	<script src="assets/scripts/formcache.min.js"></script>
+	<script src="assets/scripts/notify.min.js"></script>
+	<script src="assets/scripts/sticky.min.js"></script>
+	<script src="assets/scripts/main.js"></script>
+	<!-- endinject -->
+</head>
+<body>
+	<nav id="globalnav" class="globalnav uk-navbar">
+		<ul class="gn-logo">
+			<li class="gn-hidden"><a href="#">sipakatau</a></li>
+			<li><button id="toggle-side"><i class="uk-icon-navicon uk-icon-small"></i></button></li>
+		</ul>
+		<div class="uk-navbar-flip gn-account">
+			<ul class="gn-account-list">
+				<li>
+					<div class="link" data-uk-dropdown="{mode:'click'}">
+						<ul>
+							<li><div class="image"><img src="assets/images/user_icon.png" alt=""></div></li>
+							<li class="uk-hidden-medium uk-hidden-small"><span>Muhammad Rusdi</span></li>
+							<li><span><i class="uk-icon-angle-down"></i></span></li>
+						</ul>
+						<div class="uk-dropdown uk-dropdown-bottom">
+							<ul>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="globalnav-placeholder"></div>
+	<div class="main">
+		<div class="m-sidebar">
+			<div>
+				<div class="ms-account uk-text-center">
+					<div class="msa-image">
+						<div class="msa-image-inner">
+							<img src="assets/images/user_icon.png" alt="">
+						</div>
+					</div>
+					<div class="msa-text">
+						<div class="msa-text-wrapper">
+							<div class="msa-text-inner">
+								<h2>Muhammad Rusdi</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+				<nav class="ms-nav">
+					<ul class="msn-list uk-nav uk-nav-side uk-nav-parent-icon" data-uk-nav="{multiple:true}">
+						<li class="msn-item uk-parent">
+							<a href="#" class="msn-link"><i class="uk-icon-home"></i>Dashboard</a>
+							<ul class="uk-nav-sub">
+								<li><a href="index.html"><i class="uk-icon-circle-o"></i>Peta Wilayah PPFM</a></li>
+								<li><a href="#"><i class="uk-icon-circle-o"></i>Laporan Peserta PPFM</a></li>
+							</ul>
+						</li>
+						<li class="msn-item uk-parent uk-active">
+							<a href="#" class="msn-link"><i class="uk-icon-edit"></i>Menu MPM</a>
+							<ul class="uk-nav-sub">
+								<li class="uk-active"><a href="register-mpm.html"><i class="uk-icon-circle-o"></i>Pendaftaran MPM</a></li>
+								<li><a href="peserta-ppfm.html"><i class="uk-icon-circle-o"></i>Daftar Pesrta MPM</a></li>
+							</ul>
+
+						</li>
+						<li class="msn-item uk-parent">
+							<a href="#" class="msn-link"><i class="uk-icon-file-text"></i>Menu PPFM</a>
+							<ul class="uk-nav-sub">
+								<li><a href="register-ppfm.html"><i class="uk-icon-circle-o"></i>Pendaftaran PPFM</a></li>
+								<li><a href="#"><i class="uk-icon-circle-o"></i>Perubahan Data PPFM</a></li>
+								<li><a href="peserta-ppfm.html"><i class="uk-icon-circle-o"></i>Daftar Peserta PPFM</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div id="pendaftaran-mpm-content" class="m-content">
+			<div class="mc-header">
+				<style>
+					#pendaftaran-mpm-content > .mc-header {
+						background: url('assets/images/pmpm.jpg') no-repeat center center;
+    					background-size: cover;
+					}
+				</style>
+				<div class="mch-text uk-text-center">
+					<h2>Informasi Akun</h2>
+				</div>
+			</div>
+			<div class="mc-breadcrumb" data-uk-sticky="{top:60}">
+				<ul class="uk-breadcrumb">
+					<li><a href="#">Profil</a></li>
+				</ul>
+			</div>
+			<div class="mc-form">
+				<div class="mc-form-wrapper">
+					<div class="mc-form-inner">
+						<div class="mcf-profile">
+							<div class="mcf-content">
+								<ul class="mcf-list">
+									<li class="mcf-item account-item">
+										<div class="uk-clearfix">
+											<div class="uk-float-left">
+												<div class="account">
+													<img src="assets/images/user_icon.png" alt="">
+												</div>
+											</div>
+											<div class="account-text">
+												<div class="uk-clearfix">
+													<div class="name uk-float-left">
+														<p>Muhammad Rusdi</p>
+													</div>
+													<div class="email uk-float-right">
+														<p><i class="uk-icon-envelope"></i> muhammadrusdi@icloud.com</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+									</li>
+									<li class="mcf-item">
+										<div class="data uk-grid">
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="nama-lengkap">Nama Lengkap</label>
+													<input id="nama-lengkap" type="text" name="nama-lengkap" readonly value="Muhamad Rusdi">
+													
+												</div>
+											</div>
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="username">Nama Pengguna</label>
+													<input id="username" type="text" name="username" readonly value="muhrusdi">
+												</div>
+											</div>
+											<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+												<div class="data-inner">
+													<label for="contact">Kontak</label>
+													<input id="contact" type="text" name="contact" readonly>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer id="globalfooter" class="globalfooter">
+		<div class="gf-content uk-clearfix">
+			<div class="gf-item uk-float-left">
+				<p>2017 Bappeda Kabupaten Soppeng. <span">Developer</span></p>
+			</div>
+			<div class="gf-item uk-float-right">
+				<a href="" class="uk-button" data-uk-smooth-scroll>Kembali Ke Atas <i class="uk-icon-angle-up"></i></a>
+			</div>
+		</div>
+	</footer>
+	<!-- <script src="assets/js/scripts.js"></script> -->
+</body>
+</html>

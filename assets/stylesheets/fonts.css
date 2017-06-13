@@ -24,6 +24,13 @@
 
 @font-face {
 	font-family: 'Aller';
+	font-style: italic;
+	font-weight: 400;
+	src:local('☺︎'), url("../fonts/Aller_it.woff") format("woff"), url("../fonts/Aller_it.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: 'Aller';
 	font-style: normal;
 	font-weight: 300;
 	src:local('☺︎'), url("../fonts/Aller_Lt.woff") format("woff"), url("../fonts/Aller_Lt.ttf") format("truetype");

@@ -444,3 +444,30 @@ $(function() {
     } 
   });
 });
+
+$(function() {
+  var h4 = $('.ml-form h4');
+  var p = $('.ml-wrapper .footer a');
+
+  p.on('click', function(e) {
+    e.preventDefault();
+    if ($('.ml-form .mlf-input').first().css('display') == 'block') {
+      $('.ml-form .mlf-input').first().fadeToggle(function() {
+        $('.ml-form .mlf-input').last().fadeToggle();
+        h4.text('Masukkan alamat email anda.');
+        p.text(' Kembali ke login.');
+        p.prepend('<i class="uk-icon-angle-left"></i>')
+      });
+    } else {
+      $('.ml-form .mlf-input').last().fadeToggle(function() {
+        $('.ml-form .mlf-input').first().fadeToggle();
+        h4.text('Silahkan login untuk mengakses halaman admin.');
+        p.text('Lupa kata sandi?.');
+      });
+    }
+  });
+
+  $(window).load(function() {
+    $('.main-login').addClass('zoom');
+  });
+});

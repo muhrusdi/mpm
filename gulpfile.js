@@ -36,7 +36,10 @@ var filePath = {
     jsDist: 'dist/assets/scripts/',
 
     img: 'assets/images',
-    imgDist: 'dist/assets/images'
+    imgDist: 'dist/assets/images',
+
+    font: 'assets/fonts',
+    fontDisk: 'dist/assets/fonts'
 };
 
 //  put css files in order, used for concat process
@@ -100,7 +103,7 @@ gulp.task('watch', function() {
 /**  deploy tasks */
 //  #desc: Deploy project
 gulp.task('deploy', function () {
-    runSequence('cleanDist', 'sass', 'concatCss', 'scripts', 'copyHtml', 'copyCss', 'copyScripts', 'copyImages', 'injector');
+    runSequence('cleanDist', 'sass', 'concatCss', 'scripts', 'copyHtml', 'copyCss', 'copyScripts', 'copyImages', 'copyFonts', 'injector');
 });
 
 //  #desc: CleanDist
@@ -130,6 +133,13 @@ gulp.task('copyScripts', function () {
 gulp.task('copyImages', function() {
     return gulp.src(filePath.img + '/**/*')
         .pipe(gulp.dest(filePath.imgDist))
+        .pipe(notify({ message: 'Dist images task complete' }));
+});
+
+//  #desc: Font -> Dist
+gulp.task('copyFonts', function() {
+    return gulp.src(filePath.font + '/**/*')
+        .pipe(gulp.dest(filePath.fontDisk))
         .pipe(notify({ message: 'Dist images task complete' }));
 });
 
