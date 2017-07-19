@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     inject = require('gulp-inject'),
     sourcemaps = require('gulp-sourcemaps'),
     runSequence = require('run-sequence'),
+    purify = require('gulp-purifycss'),
     browserSync = require('browser-sync').create(),
 
     sass = require('gulp-sass'),
@@ -14,7 +15,8 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     concatJs = require('gulp-concat'),
     notify = require('gulp-notify'),
-    // fontgen = require('gulp-fontgen'),
+    fontgen = require('gulp-ttf2woff'),
+    uncss = require('gulp-uncss'),
     fontmin = require('gulp-fontmin');
 
     // --------------------------------------------------------------------------------------------------- //
@@ -55,16 +57,16 @@ var concatOrder = {
 
     js: [
         filePath.js + 'jquery.min.js',
-        filePath.js + 'jquery-ui.min.js',
         filePath.js + 'uikit.min.js',
+        filePath.js + 'nav.min.js',
+        filePath.js + 'jquery-ui.min.js',
         filePath.js + 'datepicker.min.js',
         filePath.js + 'jquery.webui-popover.min.js',
         filePath.js + 'form-select.min.js',
-        filePath.js + 'circle-progress.min.js',
         filePath.js + 'MonthPicker.min.js',
-        filePath.js + 'nav.min.js',
         filePath.js + 'search.min.js',
         filePath.js + 'sticky.min.js',
+        filePath.js + 'slideshow.min.js',
         filePath.js + 'main.js'
     ]
 };
@@ -111,7 +113,7 @@ gulp.task('cleanDist', function(cb) {
     return del(filePath.distRoot, cb);
 });
 
-//  #desc: Html -> Dist
+//  #desc: Html -> Dist 
 gulp.task('copyHtml', function () {
     return gulp.src(filePath.html + '*.html')
         .pipe(gulp.dest(filePath.htmlDist));
@@ -154,12 +156,11 @@ gulp.task('injector', function () {
         .pipe(gulp.dest(filePath.distRoot));
 });
 
-// gulp.task('fontgen', function() {
-//     return gulp.src('assets/fonts/*.ttf')
-//         .pipe(fontgen({
-//             dest: 'assets/fonts/'
-//         }));
-// });
+gulp.task('fontgen', function() {
+    return gulp.src('assets/fonts/*.ttf')
+        .pipe(fontgen())
+        .pipe(gulp.dest('assets/fonts/'));
+});
 
 gulp.task('fontmin', function() {
     return gulp.src('assets/fonts/Aller_Rg.ttf')
@@ -195,6 +196,7 @@ gulp.task('sass', function() {
 gulp.task('concatCss', function () {
     return gulp.src(concatOrder.css, { base: filePath.cssCompiled })
         .pipe(concatCss('app.css'))
+        .pipe(purify(['assets/scripts/*.js', '*.html']))
         .pipe(gulp.dest(filePath.cssCompiled))
         .pipe(sourcemaps.init())
         .pipe(cleanCss())

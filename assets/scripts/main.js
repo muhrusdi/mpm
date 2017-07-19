@@ -37,70 +37,6 @@ $(function() {
     }));
   }
 
-  // Page 2
-  var lists = [];
-  var count = 0;
-
-  $('.f-tambah-data').on('click', function() {
-    inputValidatedIv();
-    // if ($('#page-2 .error').length == 0) {
-    var list = $('#fs-page-iv > li > ol');
-    var raw = '<li class="uk-parent">'+
-                '<a href="#"></a>'+
-                '<ul class="uk-nav-sub">'+
-                  '<li>'+
-                    // $(mcfList).html()+
-                  '</li>'+
-                '</ul>'+
-              '</li>';
-    list.append(raw);
-    var c = $('#fs-page-iv').next().clone();
-    
-    var item = $('#fs-page-iv > li > ol > li');
-
-    parsing(c);
-    
-    // inputValidatedIv('page-2');
-    $('#fs-page-iv').next().find('input, select').each(function(key, value) {
-      $(value).val('').attr('value', '');
-      if ($(value).is('select')) {
-        $(value).find('option[selected="selected"]').removeAttr('selected');
-        $(value).find('option[value="0"]').attr('selected', true);
-      }
-    });
-    // }
-  });
-
-  var i = 0;
-
-  function parsing(el) {
-    el.find('input, select').attr('id', function(i, value) {
-      return value + count;
-    });
-
-    var check = true;
-
-    $('#fs-page-iv > li > ol > li').each(function(key, value) {
-      if (el.find('input[id="nik-iv'+count+'"]').val() == $(value).find('input[id="nik-iv'+key+'"]').val()) {
-        check = false;
-      }
-    })
-    
-    if (check) {
-      $('#fs-page-iv > li > ol > li > ul > li').append(el);   
-      
-      $('#fs-page-iv > li > ol > li').each(function(key, value) {
-        var n = $('[id="nama-iv'+ key +'"]').val() + ' ( ' +  $('[id="nik-iv'+ key +'"]').val() + ' )';
-        $(value).children('a').text(n);
-      });
-      count++;
-    } else {
-      $('#fs-page-iv > li > ol > li:last-child').remove();
-      el.remove();
-      $.UIkit.notify("Data sudah siap di submit", {status:'warning', pos:'top-center'});
-    }
-  }
-
   function inputValidatedIv(page) {
     $('#'+ page +' input, #'+ page +' select').each(function(key, value) {
       if ($(value).is('input:text')) {
@@ -279,6 +215,14 @@ $(function() {
     }
   }
 
+  $('.checkbox input[type=radio]').not('.checkbox-nest').each(function(key, value) {
+    $(value).on('click',function() {
+      if ($(this).is(':checked')) {
+        $(this).parent().find('.checkbox-nest > div > input[type=radio]').first().prop('checked', true);
+      }
+    });
+  });
+
   // Cache Form
 
   var _form = $('#pendaftaran-ppfm');
@@ -300,10 +244,16 @@ $(function() {
       if ($(this).filter('[href="'+e.target.hash+'"]').parent().next() != 0) {
         $(this).filter('[href="'+e.target.hash+'"]').parent().next().removeClass('active');
         $(this).filter('[href="'+e.target.hash+'"]').parent().next().next().removeClass('active');
+        $(this).filter('[href="'+e.target.hash+'"]').parent().next().next().next().removeClass('active');
       }
 
       if ($(this).filter('[href="'+e.target.hash+'"]').parent().index() == 2) {
         $(this).filter('[href="'+e.target.hash+'"]').parent().prev().addClass('active');
+      }
+      
+      if ($(this).filter('[href="'+e.target.hash+'"]').parent().index() == 3) {
+        $(this).filter('[href="'+e.target.hash+'"]').parent().prev().addClass('active');
+        $(this).filter('[href="'+e.target.hash+'"]').parent().prev().prev().addClass('active');
       }
       $(s).show();
       f.not(e.target.hash).animate({opacity: 0}, {
@@ -318,7 +268,6 @@ $(function() {
         },
         easing: 'easeInOutBack'
       });
-      console.log(s);
     }
   });
 
@@ -331,44 +280,7 @@ $(function() {
     c.text($('.mc-form-detail fieldset').index());
   }
 
-  // $('.f-next').click(function() {
-  //   var errorMessage = '';
-  //   var errorCount = 0;
-  //   var fs = $(this).closest('fieldset');
-  //   v1('aset-bergerak-v', 'aset-bergerak');
-  //   v1('rt-program-v', 'rt-peserta-program');
-  //   v1('rt-aset-tidak-bergerak-v', 'aset-tidak-bergerak');
-  //   v1('punya-aset-lain-g', '');
-  //   v1('ternak-v', '');
-  //   // inputValidatedIv('page-1');
-  //   if ($('#page-1 .error').length != 0) {
-  //     next(this);
-  //   }
-  // });
-
-
-  $('.f-next').click(function() {
-    // select1('Pilih salah satu');
-    // v1('hasil-pencacahan-rt', '');
-    // v1('penugasan-bangunan', '');
-    // v1('jenis-lantai-luas', '');
-    // v1('jenis-dinding-g', 'jenis-dinding');
-    // v1('jenis-atap-g', 'jenis-atap');
-    // v1('sumber-air-minum', '');
-    // v1('status-lahan-tt', '');
-    // v1('peroleh-air', '');
-    // v1('sumber-penerangan-g', 'sumber-penerangan');
-    // v1('bahan-bakar-masak', '');
-    // v1('fasilitas-bab-g', 'fasilitas-bab');
-    // v1('pembuangan-tinja', '');
-    // if ($('#page-1 .error').length != 0) {
-      next(this);
-    // }
-  });
-
-
-
-  function next(n) {
+  window.gNext = function(n) {
     if (animating) return false;
     animating = true;
 
@@ -392,7 +304,7 @@ $(function() {
     });
   }
 
-  function prev(n) {
+  window.gPrev = function(n) {
     if (animating) return false;
     animating = true;
 
@@ -415,10 +327,6 @@ $(function() {
     });
   }
 
-  $('.f-prev').click(function() {
-    prev(this);
-  });
-
   function countPage() {
     var p = $('.mc-form-detail fieldset');
     var c = $('#count-page');
@@ -440,7 +348,7 @@ $(function() {
       prevLabel: 'sebelumnya',
       jumpYears: '',
       backTo: 'Kembali ke',
-      months: ['Januari', 'Februari', 'Maret', 'Mei', 'April', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']
+      months: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']
     } 
   });
 });
@@ -456,7 +364,7 @@ $(function() {
         $('.ml-form .mlf-input').last().fadeToggle();
         h4.text('Masukkan alamat email anda.');
         p.text(' Kembali ke login.');
-        p.prepend('<i class="uk-icon-angle-left"></i>')
+        p.prepend('<i class="uk-icon-angle-left"></i>');
       });
     } else {
       $('.ml-form .mlf-input').last().fadeToggle(function() {
@@ -466,6 +374,8 @@ $(function() {
       });
     }
   });
+
+  // $('select').filter(':disabled').parent().removeClass('uk-button');
 
   $(window).load(function() {
     $('.main-login').addClass('zoom');

@@ -5,6 +5,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
     <meta content="telephone=no" name="format-detection">
     <meta content="maximum-dpr=2" name="flexible" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-touch-fullscreen" content="no"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 	<title>MPM</title>
@@ -39,7 +40,7 @@
 					</div>
 					<div class="right uk-text-center">
 						<div class="header">
-							<h3>sipakatau</h3>
+							<a href="/"><h3>sipakatau</h3></a>
 							<p>( Sistem Informasi Penaggulangan Kemiskinan Terpadu )</p>
 						</div>
 						<div action="" class="ml-form">
@@ -49,14 +50,14 @@
 									<label for="username">NAMA PENGGUNA</label>
 									<div class="input-group  uk-text-center">
 										<i class="uk-icon-user"></i>
-										<input type="text" placeholder="">
+										<input type="text" placeholder="Masukkan Username">
 									</div>
 								</div>
 								<div>
 									<label for="username">KATA SANDI</label>
-									<div class="input-group  uk-text-center">
+									<div class="input-group  error uk-text-center">
 										<i class="uk-icon-key"></i>
-										<input type="password" placeholder="">
+										<input type="password" placeholder="Masukkan Password">
 										<button type="submit" class="submit"><i class="uk-icon-arrow-circle-o-right uk-icon-small"></i></button>
 									</div>
 								</div>
@@ -84,6 +85,16 @@
 		</div>
 		
 	</div><!-- main -->
+	<style>
+		.main-login:before {
+			background: url('assets/images/login_bg.png') no-repeat center top;
+			background-size: cover;
+		}
+		.main-login .ml-wrapper .left .form-image {
+			background: url('assets/images/form_img.png') no-repeat center center;
+			background-size: cover;
+		}
+	</style>
 	<footer class="footer-login">
 		<div class="gf-content">
 			<div class="uk-text-center">

@@ -122,7 +122,7 @@
 			<div class="mc-form">
 				<div class="mc-form-wrapper">
 					<div class="mc-form-inner">
-						<form id="pendaftaran-ppfm" action="" method="post" class="uk-form">
+						<form id="pendaftaran-ppfm" action="" method="post" class="pendaftaran-ppfm uk-form">
 							<div class="mcf-content">
 								<div class="mcf-title">
 									<h3>Formulir Pendaftaran Data Terpadu Program Penanganan Fakir Miskin</h3>
@@ -138,6 +138,9 @@
 										<li class="disabled">
 											<a href="#page-3">3</a>
 										</li>
+										<li class="disabled">
+											<a href="#page-4">4</a>
+										</li>
 									</ul>
 								</div>
 								<fieldset id="page-1">
@@ -152,7 +155,7 @@
 														<div>
 															<label for="prov-iv">1. Provinsi</label>
 														</div>
-														<div class="uk-button uk-form-select uk-active" data-uk-form-select>
+														<div class="uk-button uk-disabled uk-form-select uk-active" data-uk-form-select>
 															<span class="">Pilih...</span>
 						                                    <i class="uk-icon-angle-down uk-icon-medium"></i>
 						                                    <select id="prov-iv" name="prov-iv">
@@ -219,6 +222,8 @@
 														<!-- <div class="error">Pesan Error</div> -->
 													</div>
 												</div>
+
+												<!--Table-->
 												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
 													<div class="data-inner">
 														<label for="no-uru-rt-iv">7. Nomor Urut Rumah Tangga (Dari PBDT 2015. FKP Kolom (1))</label>
@@ -369,7 +374,7 @@
 																</div>
 															</div>
 															<div>
-																<input id="plesteran-iv" type="radio" name="jenis-dinding-g"><label for="plesteran-iv">2. Plesteran Anyaman Bambu / Kawat</label>
+																<input id="plesteran-iv2" type="radio" name="jenis-dinding-g"><label for="plesteran-iv2">2. Plesteran Anyaman Bambu / Kawat</label>
 																<div class="checkbox-nest">
 																	<div><input id="plesteran-bagus" type="radio" name="jenis-dinding"><label for="plesteran-bagus">1. Bagus / Kualitas Tinggi</label></div>
 																	
@@ -1228,7 +1233,87 @@
 										</li>
 									</ul>
 								</fieldset>
-								<fieldset id="page-3">
+								<fieldset id="page-3" >
+									<ul id="fs-page-iv-2" class="daftar-input-ppfm uk-nav uk-nav-parent-icon" data-uk-nav={multiple: true}>
+										<li class="uk-parent uk-active">
+											<a href="#">Daftar Inputan Anggota Keluarga 2</a>
+											<ol class="uk-nav-sub uk-nav-parent-icon" data-uk-nav={multiple: true}>
+											</ol>
+										</li>
+									</ul>
+									<ul class="mcf-list">
+										
+										<li class="mcf-item">
+											<div class="desc-2">
+												<p><i>Apakah Ada Anak Dari Kepala Keluarga Yang Masih Menjadi Tanggungan Tetapi Sedang Sekolah / Kuliah & Tidak Tinggal Dalam Ruta Ini? Jika ada, sebutkan</i></p>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="data uk-grid">
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="nama-t-iv">1. Nama</label>
+														<input id="nama-t-iv" data-form-iv="nama-t-iv" type="text" name="nama-t-iv">
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="alamat-t-iv">2. Alamat Tempat Tinggal</label>
+														<input id="alamat-t-iv" data-form-iv="alamat-t-iv" type="text" name="alamat-t-iv">
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="nik-t-iv">3. Nomor Induk Kependudukan (NIK)</label>
+														<input id="nik-t-iv" data-form-iv="nik-t-iv" type="text" name="nik-t-iv">
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="nama-sekolah-t-iv">4. Nama Sekolah</label>
+														<input id="nama-sekolah-t-iv" data-form-iv="nama-sekolah-t-iv" type="text" name="nama-sekolah-t-iv">
+														
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-medium-1-2 uk-width-small-1-1">
+													<div class="data-inner">
+														<label for="nisn-t-iv">5. NISN / NO KTM</label>
+														<input id="nisn-t-iv" data-form-iv="nisn-t-iv" type="text" name="nisn-t-iv">
+														
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="uk-alert"></div>
+										</li>
+										<li class="mcf-item">
+											<div class="submit">
+												<div class="uk-clearfix">
+													<div class="uk-float-right">
+														<button type="button" class="f-tambah-data">Tambah Data</button>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="mcf-item">
+											<div class="submit">
+												<div class="uk-clearfix">
+													<div class="uk-float-left">
+														<button type="button" class="f-prev">Sebelumnya</button>
+													</div>
+													<div class="uk-float-right">
+														<button type="button" class="f-next">Selanjutnya</button>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</fieldset>
+								<fieldset id="page-4">
 									<ul class="mcf-list">										
 										<li class="mcf-item">
 											<div class="title">
@@ -1242,7 +1327,7 @@
 															<div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
 																<div class="checkbox">
 																	<div>
-																		<input id="tabung-gas-v-g" type="radio" name="aset-bergerak-v"><label for="tabung-gas-v-g">a. Tabung gas 5.5 kg atau lebih</label>
+																		<input id="tabung-gas-v-g" type="checkbox" name="aset-bergerak-v"><label for="tabung-gas-v-g">a. Tabung gas 5.5 kg atau lebih</label>
 																		<div class="checkbox-nest">
 																			<div><input id="gas-ya" type="radio" name="aset-bergerak"><label for="gas-ya">1. Ya</label></div>
 																			
@@ -1254,11 +1339,11 @@
 															<div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
 																<div class="checkbox">
 																	<div>
-																		<input id="plesteran-iv" type="radio" name="aset-bergerak-v"><label for="plesteran-iv">b. Lemari es / kulkas</label>
+																		<input id="plesteran-iv" type="checkbox" name="aset-bergerak-v"><label for="plesteran-iv">b. Lemari es / kulkas</label>
 																		<div class="checkbox-nest">
-																			<div><input id="lemari-ya" type="radio" name="aset-bergerak"><label for="lemari-ya">1. Ya</label></div>
+																			<div><input id="lemari-ya" type="radio" name="aset-bergerak2"><label for="lemari-ya">1. Ya</label></div>
 																			
-																			<div><input id="lemari-tidak" type="radio" name="aset-bergerak"><label for="lemari-tidak">2. Tidak</label></div>
+																			<div><input id="lemari-tidak" type="radio" name="aset-bergerak2"><label for="lemari-tidak">2. Tidak</label></div>
 																		</div>
 																	</div>
 																</div>
@@ -1695,9 +1780,130 @@
 										</li>
 									</ul>
 								</fieldset>
-								
 							</div>
 						</form>
+						<script>
+							'use-strict';
+							// Page 2
+							var lists = [];
+							var count = 0;
+							var count2 = 0;
+
+							$('#page-2 .f-tambah-data').on('click', function() {
+								fieldSet('fs-page-iv');
+							});
+
+							$('#page-3 .f-tambah-data').on('click', function() {
+								fieldSet('fs-page-iv-2');
+							});
+
+							function fieldSet(fs) {
+								var list = $('#'+fs+' > li > ol');
+								var raw = 	'<li class="uk-parent">'+
+												'<a href="#"></a><i class="uk-icon-close delete-item"></i>'+
+												'<ul class="uk-nav-sub">'+
+													'<li>'+
+													'</li>'+
+													'<li>'+
+														'<div class="uk-clearfix">'+
+																'<div class="uk-float-right">'+
+																'<button class="button-save">Simpan</button>'+
+															'</div>'+
+														'</div>'+
+													'</li>'+
+												'</ul>'+
+											'</li>';
+								list.append(raw);
+								$('#'+fs).next().find('input, select').each(function(key, value) {
+									if ($(value).is(':text')) {
+										$(value).attr('value', $(value).val());
+									} else if ($(value).is('select')) {
+										$(value).attr('value', $(value).val());
+										$(value).find('option[value="'+ $(value).val() +'"]').attr('selected', true);
+									}
+								});
+
+								var c = $('#'+fs).next().clone();
+								var item = $('#'+fs+' > li > ol > li');
+								
+								parsing(c, '#'+fs, 'b');
+								$('#'+fs).next().find('input, select').each(function(key, value) {
+									if ($(value).is(':text')) {
+										$(value).val('').prop('value', '');
+									} else if ($(value).is('select')) {
+										$(value).val($(value).find('option').first().val()).change();
+										$(value).find('option[selected="selected"]').removeAttr('selected');
+									} else if ($(value).is(':radio') && $(value).is(':checkbox')) {
+										$(value).prop('checked', false);
+									}
+								});
+							}
+
+							$('ol').on('click', '.delete-item', function(e) {
+								$(e.currentTarget.offsetParent).remove();
+							});
+							
+							/* NOTE:
+							parameter
+							el: element fieldset yang terkloning
+							page: get id #fs-page-iv
+							c: parameter untuk tambah karakter ke id inputan
+							**************************/
+							function parsing(el, page, c) {
+								
+								el.find('input, select').attr('id', function(i, value) {
+									if (c == 'a') {
+										return value + c + count;
+									} else {
+										return value + c + count2;
+									}
+								});
+								
+								
+
+								var check = true;
+								$(page+' > li > ol > li').each(function(key, value) {
+									if (c == 'a') {
+										if (el.find('input[id="nik-iv'+ c + count +'"]').val() == $(value).find('input[id="nik-iv'+ c +key+'"]').val()) {
+										check = false;
+										}
+									} else {
+										if (el.find('input[id="nik-t-iv'+ c + count2 +'"]').val() == $(value).find('input[id="nik-t-iv'+ c +key+'"]').val()) {
+										check = false;
+										}
+									}
+								});
+								
+								if (check) {
+									$(page+' > li > ol > li > ul > li').first().append(el);
+									$(page+' > li > ol > li').each(function(key, value) {
+										if (c == 'a') {
+											var n = $('[id="nama-iv'+ c + key +'"]').val() + ' ( ' +  $('[id="nik-iv'+ c + key +'"]').val() + ' )';
+											$(value).children('a').text(n);
+										} else {
+											var n = $('[id="nama-t-iv'+ c + key +'"]').val() + ' ( ' +  $('[id="nik-t-iv'+ c + key +'"]').val() + ' )';
+											$(value).children('a').text(n);
+										}
+									});
+									if (c == 'a') {
+										// count++;
+									} else {
+										// count2++;
+									}
+								} else {
+									$(page+' > li > ol > li:last-child').remove();
+									el.remove();
+									$.UIkit.notify("Data sudah siap di submit", {status:'warning', pos:'top-center'});
+								}
+							}
+							$('.f-next').on('click', function() {
+								gNext(this);
+							});
+
+							$('.f-prev').on('click', function() {
+								gPrev(this);
+							});
+						</script>
 					</div>
 				</div>
 			</div>
@@ -1706,7 +1912,7 @@
 	<footer id="globalfooter" class="globalfooter">
 		<div class="gf-content uk-clearfix">
 			<div class="gf-item uk-float-left">
-				<p>2017 Bappeda Kabupaten Soppeng. <span">Developer</span></p>
+				<p>2017 © Bappeda Kabupaten Soppeng. <span>Developer</span></p>
 			</div>
 			<div class="gf-item uk-float-right">
 				<a href="" class="uk-button" data-uk-smooth-scroll>Kembali Ke Atas <i class="uk-icon-angle-up"></i></a>

@@ -20,10 +20,14 @@
     "gulp-fontmin": "^0.7.4",
     "gulp-inject": "*",
     "gulp-notify": "*",
+    "gulp-purifycss": "^0.2.0",
     "gulp-rename": "*",
     "gulp-sass": "*",
     "gulp-sourcemaps": "*",
+    "gulp-ttf2woff": "^1.1.0",
     "gulp-uglify": "*",
+    "gulp-uncss": "^1.0.6",
+    "otf2ttf": "^1.1.2",
     "run-sequence": "*"
   },
   "dependencies": {
